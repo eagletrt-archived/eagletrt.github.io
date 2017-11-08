@@ -1,0 +1,27 @@
+VOLANTE
+=======
+
+.. image:: /images/wallpaper.png
+
+Qui troverai tutto quello che ti serve per il volante
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   cross
+
+.. code-block:: bash
+	
+	some code
+
+.. note:: 
+	a note
+
+.. warning:: 
+	a warning
+
+
+
+

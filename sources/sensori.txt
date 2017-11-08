@@ -1,0 +1,20 @@
+SENSORI
+=======
+
+.. image:: /images/wallpaper.png
+
+Qui troverai tutto quello che ti serve per i sensori
+
+.. code-block:: bash
+	
+	some code
+
+.. note:: 
+	a note
+
+.. warning:: 
+	a warning
+
+
+
+
