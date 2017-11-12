@@ -1,4 +1,4 @@
-MURETTO
+Muretto
 =======
 
 .. image:: /images/wallpaper.png

@@ -13,7 +13,7 @@ Questa è la raccolta delle documentazioni usate dal Team Eagle
 Contents:
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    volante
 
@@ -24,14 +24,3 @@ Contents:
    muretto
 
    help
-   
-   
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-

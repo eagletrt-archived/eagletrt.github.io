@@ -1,4 +1,4 @@
-SENSORI
+Sensori
 =======
 
 .. image:: /images/wallpaper.png
