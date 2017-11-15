@@ -1,7 +1,7 @@
+.. image:: /images/wallpaper.png
+
 Discover Raspberry Pi Board IP
 =============================
-
-.. image:: /images/wallpaper.png
 
 Collegamento al Volante via SSH
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

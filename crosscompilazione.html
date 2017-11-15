@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.02
+                0.03
               </div>
             
           
@@ -153,8 +153,8 @@
         
       <li>Guida per crosscompilare le librerie Qt per Raspberry</li>
     
+ 
     
-
   </ul>
 
   
@@ -163,9 +163,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="guida-per-crosscompilare-le-librerie-qt-per-raspberry">
+  <img alt="images/wallpaper.png" src="images/wallpaper.png" />
+<div class="section" id="guida-per-crosscompilare-le-librerie-qt-per-raspberry">
 <h1>Guida per crosscompilare le librerie Qt per Raspberry<a class="headerlink" href="#guida-per-crosscompilare-le-librerie-qt-per-raspberry" title="Permalink to this headline">¶</a></h1>
-<img alt="images/wallpaper.png" src="images/wallpaper.png" />
 <p>Le Qt sono librerie grafiche del c++ che abbiamo usato per programmare l&#8217;interfaccia del volante delle nostro monoposto. Ma cosa vuol dire crosscompilare? E perché per Raspberry? La risposta è molto semplice: per mostrare la nostra <strong class="program">stupenda</strong> interfaccia utilizziamo il <strong class="program">single-board computer</strong> noto come Raspberry. Questa scheda però non è uguale uguale ai nostri computer, essi infatti utilizzano un processore Intel che, come è facilmente intuibile, utilizza un Assembly di tipo Intel che è strutturalmente diverso dall&#8217;Assembly ARM sul quale è basato il processore del nostro Raspberry. Il problema principale è, quindi, che nel momento in cui noi compiliamo il nostro programma che utilizza le Qt, creiamo un eseguibile per Assembly Intel (che ovviamente il Raspberry non è in grado di eseguire), ecco quindi che entra in gioco la crosscompilazione. Avete già capito di cosa si tratta? Nel caso non lo aveste ancora fatto ve lo dico io: la crosscompilazione serve per creare un eseguibile per Assembly ARM e quindi <strong class="program">suitable</strong> per il nostro Raspberry.</p>
 <div class="section" id="materiale-d-uso">
 <h2>Materiale d&#8217;uso<a class="headerlink" href="#materiale-d-uso" title="Permalink to this headline">¶</a></h2>
@@ -182,9 +182,9 @@
 <div class="section" id="ready-set-go">
 <h2>Ready, set...go<a class="headerlink" href="#ready-set-go" title="Permalink to this headline">¶</a></h2>
 <p>Bene, siamo pronti per cominciare la crosscompilazione (finalmente direte voi...bè, ne riparliamo a operazione conclusa).
-Per prima cosa bisogna installare Ubuntu 16.04.3 LTS x64, di cui potete recuperarne l&#8217;immagine a questo indirizzo <a class="reference external" href="https://www.ubuntu-it.org/download">https://www.ubuntu-it.org/download</a>. Vi comparirà la seguente schermata:
-<a class="reference external" href="https://github.com/giacomoalbe/EagleSensors/commit/243deff5fbcd9ce04f26636e00f827a8e2d08408#diff-9c8366229ea365cdcfdf6501193f6253">https://github.com/giacomoalbe/EagleSensors/commit/243deff5fbcd9ce04f26636e00f827a8e2d08408#diff-9c8366229ea365cdcfdf6501193f6253</a>
-Si può installare Ubuntu anche su macchina virtuale, sinceramente, però, lo sconsiglio a causa della lentezza e dei problemi di spazio che potrebbero generarsi.
+Per prima cosa bisogna installare Ubuntu 16.04.3 LTS x64, di cui potete recuperarne l&#8217;immagine a questo indirizzo <a class="reference external" href="https://www.ubuntu-it.org/download">https://www.ubuntu-it.org/download</a>. Vi comparirà la seguente schermata:</p>
+<img alt="images/DownloadUbuntu.png" src="images/DownloadUbuntu.png" />
+<p>Si può installare Ubuntu anche su macchina virtuale, sinceramente, però, lo sconsiglio a causa della lentezza e dei problemi di spazio che potrebbero generarsi.
 Come seconda cosa bisogna installare le Qt (versione 5.7), potete recuperarle direttamente dal sito <a class="reference external" href="https://download.qt.io/official_releases/online_installers/">https://download.qt.io/official_releases/online_installers/</a>. Selezionate &#8220;qt-unified-linux-x64-online.run&#8221;.</p>
 <p>Ora aprite il terminale (CTRL+ALT+T) ed eseguite i seguenti comandi:</p>
 <blockquote>
@@ -356,6 +356,7 @@ Ora, nella <strong class="program">toolbar</strong> andate su <strong class="pro
 </div></blockquote>
 <p>e selezionate il file <strong class="program">qmake</strong>.</p>
 <p>Fatto ciò, se siete riusciti a fare tutto non mi resta altro che dirvi <strong class="program">good job guys!</strong>, in caso contrario vi conviene ricominciare da capo.</p>
+<p>Grazie ad <strong class="program">Antonio Stefani</strong> per la guida.</p>
 </div>
 </div>
 

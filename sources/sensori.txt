@@ -1,20 +1,15 @@
+.. image:: /images/wallpaper.png
+
 Sensori
 =======
 
-.. image:: /images/wallpaper.png
-
 Qui troverai tutto quello che ti serve per i sensori
 
-.. code-block:: bash
-	
-	some code
+Contents:
 
-.. note:: 
-	a note
+.. toctree::
+   :maxdepth: 3
 
-.. warning:: 
-	a warning
-
-
+   SimSensori
 
 

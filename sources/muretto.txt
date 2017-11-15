@@ -1,7 +1,7 @@
+.. image:: /images/wallpaper.png
+
 Muretto
 =======
-
-.. image:: /images/wallpaper.png
 
 Qui troverai tutto quello che ti serve per il muretto
 

@@ -3,12 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. image:: /images/wallpaper.png
+
 Welcome to EAGLEDOC's documentation!
 ====================================
 
-.. image:: /images/wallpaper.png
+Questa è la raccolta delle documentazioni usate dal Team Eagle
 
-Questa è la raccolta delle documentazioni usate dal Team Eagle 
 
 Contents:
 
@@ -24,3 +25,16 @@ Contents:
    muretto
 
    help
+
+
+Le relative Repository sono accessibili dai seguenti link:
+
+*Documentazione: https://github.com/eagletrt/eagletrt.github.io
+
+*Telemetria: https://github.com/eagletrt/eagle-telemetria
+
+*BMS: https://github.com/eagletrt/eagle-bms
+
+*Sensori: https://github.com/eagletrt/eagle-sensori
+
+*Web-Platform: https://github.com/eagletrt/eagle-webplatform
