@@ -183,7 +183,7 @@ In realtà, le librerie indicate come mancanti, sono presenti nel vostro compute
 	*Rieseguite il :program:`configure` precedente:
 		.. code-block:: sh
 
-			./configure -opengl es2 -device linux-rasp-pi-g++ -device-option CROSS_COMPILE=\$RPI_TOOLCHAIN -sysroot $RPI_SYSROOT -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi
+			./configure -opengl es2 -device linux-rasp-pi-g++ -device-option CROSS_COMPILE=$RPI_TOOLCHAIN -sysroot $RPI_SYSROOT -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi
 
 	Tranquilli, dovrebbe metterci molto meno rispetto a prima. Una volta fatto ciò dovrebbe comparirvi la seguente schermata:
 
