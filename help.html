@@ -5,72 +5,69 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Help &mdash; EAGLEDOC 0.01 documentation</title>
-  
 
-  
-  
-  
-  
 
-  
 
-  
-  
-    
 
-  
 
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
     <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
-  
 
-  
 
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
+
+
+
     <link rel="top" title="EAGLEDOC 0.01 documentation" href="index.html"/>
-        <link rel="prev" title="Muretto" href="muretto.html"/> 
+        <link rel="prev" title="Muretto" href="muretto.html"/>
 
-  
+
   <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-   
+
   <div class="wy-grid-for-nav">
 
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
-          
 
-          
+
+
             <a href="index.html" class="icon icon-home"> EAGLEDOC
-          
 
-          
+
+
           </a>
 
-          
-            
-            
-              <div class="version">
-                0.03
-              </div>
-            
-          
 
-          
+
+
+              <div class="version">
+                0.04
+              </div>
+
+
+
+
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -79,22 +76,23 @@
   </form>
 </div>
 
-          
+
         </div>
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+
+
+
+
+
+
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="volante.html">Volante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webplatform.html">Web Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bms.html">BMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sensori.html">Sensori</a></li>
 <li class="toctree-l1"><a class="reference internal" href="muretto.html">Muretto</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Help</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Help</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#install-sphinx">Install Sphinx</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-a-project">Create a Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-a-file-rst">Create a file.rst</a></li>
@@ -104,27 +102,27 @@
 </li>
 </ul>
 
-            
-          
+
+
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
+
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">EAGLEDOC</a>
-        
+
       </nav>
 
 
-      
+
       <div class="wy-nav-content">
         <div class="rst-content">
-          
+
 
 
 
@@ -143,29 +141,35 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Help</li>
-    
-    
 
-    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+
+      <li>Help</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="sources/help.txt" rel="nofollow"> View page source</a>
+
+
+      </li>
+
   </ul>
 
-  
+
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+
   <img alt="images/wallpaper.png" src="images/wallpaper.png" />
 <div class="section" id="help">
 <h1>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h1>
 <p>Qui troverai tutto quello che serve per installare Sphinx e creare pagine HTML</p>
 <div class="section" id="install-sphinx">
 <h2>Install Sphinx<a class="headerlink" href="#install-sphinx" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo apt-get install python-sphinx
+<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install python-sphinx
 mkdir sphinx-project
 <span class="nb">cd</span> sphinx-project
 </pre></div>
@@ -173,7 +177,7 @@ mkdir sphinx-project
 </div>
 <div class="section" id="create-a-project">
 <h2>Create a Project<a class="headerlink" href="#create-a-project" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-sh"><div class="highlight"><pre><span></span>sphinx-quickstart
+<div class="highlight-sh"><div class="highlight"><pre>sphinx-quickstart
 </pre></div>
 </div>
 <p>Ora da terminale verrà richiesto di creare il progetto e bisognerà completare questi campi:</p>
@@ -188,7 +192,7 @@ Una volta terminata la creazione dei file necessari bisogna testare se è andato
 <div class="section" id="create-a-file-rst">
 <h2>Create a file.rst<a class="headerlink" href="#create-a-file-rst" title="Permalink to this headline">¶</a></h2>
 <p>Per generare nuove pagine bisogna creare un nuovo file <cite>.rst</cite> dove andranno scritti tutti i tag</p>
-<div class="highlight-sh"><div class="highlight"><pre><span></span>touch file.rst
+<div class="highlight-sh"><div class="highlight"><pre>touch file.rst
 </pre></div>
 </div>
 <p>Ora passo a passo verrano mostrati i comandi necessari per creare una pagina:</p>
@@ -202,7 +206,7 @@ Una volta terminata la creazione dei file necessari bisogna testare se è andato
 <dt id="directive-image">
 <code class="descname">.. image::</code><code class="descclassname"> immagine</code><a class="headerlink" href="#directive-image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Esempio:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">wallpaper</span><span class="o">.</span><span class="n">png</span>
+<div class="highlight-python"><div class="highlight"><pre>.. image:: /images/wallpaper.png
 </pre></div>
 </div>
 </dd></dl>
@@ -219,9 +223,9 @@ Una volta terminata la creazione dei file necessari bisogna testare se è andato
 <dt id="directive-note">
 <code class="descname">.. note::</code><code class="descclassname"> </code><a class="headerlink" href="#directive-note" title="Permalink to this definition">¶</a></dt>
 <dd><p>Esempio:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">note</span><span class="p">::</span>
+<div class="highlight-python"><div class="highlight"><pre>.. note::
 
-                <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">note</span>
+                this is a note
 </pre></div>
 </div>
 </dd></dl>
@@ -234,9 +238,9 @@ Una volta terminata la creazione dei file necessari bisogna testare se è andato
 <dt id="directive-warning">
 <code class="descname">.. warning::</code><code class="descclassname"> </code><a class="headerlink" href="#directive-warning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Esempio:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">warning</span><span class="p">::</span>
+<div class="highlight-python"><div class="highlight"><pre>.. warning::
 
-                <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">warning</span>
+                this is a warning
 </pre></div>
 </div>
 </dd></dl>
@@ -250,9 +254,9 @@ Una volta terminata la creazione dei file necessari bisogna testare se è andato
 <dt id="directive-code-block">
 <code class="descname">.. code-block::</code><code class="descclassname"> linguaggio</code><a class="headerlink" href="#directive-code-block" title="Permalink to this definition">¶</a></dt>
 <dd><p>Esempio:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">sh</span>
+<div class="highlight-python"><div class="highlight"><pre>.. code-block:: sh
 
-                <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">code</span>
+                this is a code
 </pre></div>
 </div>
 </dd></dl>
@@ -269,7 +273,7 @@ Una volta terminata la creazione dei file necessari bisogna testare se è andato
 <div class="section" id="build-project">
 <h2>Build Project<a class="headerlink" href="#build-project" title="Permalink to this headline">¶</a></h2>
 <p>Ora per creare effettivamente i file html si usa il comando make</p>
-<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo make clean
+<div class="highlight-sh"><div class="highlight"><pre>sudo make clean
 sudo make html
 </pre></div>
 </div>
@@ -278,7 +282,7 @@ sudo make html
 <div class="section" id="themes-from-github">
 <h2>Themes From GitHub<a class="headerlink" href="#themes-from-github" title="Permalink to this headline">¶</a></h2>
 <p>Se non ancora installato scaricare pip oppure skippare al secondo comando</p>
-<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo apt-get install python-pip
+<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install python-pip
 pip install sphinx_rtd_theme
 </pre></div>
 </div>
@@ -295,18 +299,18 @@ pip install sphinx_rtd_theme
 
            </div>
            <div class="articleComments">
-            
+
            </div>
           </div>
           <footer>
-  
+
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
+
+
         <a href="muretto.html" class="btn btn-neutral" title="Muretto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+
     </div>
-  
+
 
   <hr/>
 
@@ -316,7 +320,7 @@ pip install sphinx_rtd_theme
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
 </footer>
 
@@ -326,10 +330,10 @@ pip install sphinx_rtd_theme
     </section>
 
   </div>
-  
 
 
-  
+
+
 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
@@ -345,21 +349,21 @@ pip install sphinx_rtd_theme
       <script type="text/javascript" src="static/underscore.js"></script>
       <script type="text/javascript" src="static/doctools.js"></script>
 
-  
 
-  
-  
+
+
+
     <script type="text/javascript" src="static/js/theme.js"></script>
-  
 
-  
-  
+
+
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-   
+
 
 </body>
 </html>

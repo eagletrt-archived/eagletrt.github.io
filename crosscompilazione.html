@@ -5,74 +5,71 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Guida per crosscompilare le librerie Qt per Raspberry &mdash; EAGLEDOC 0.01 documentation</title>
-  
 
-  
-  
-  
-  
 
   
 
-  
-  
-    
 
-  
 
-  
-  
+
+
+
+
+
+
+
+
+
+
+
     <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
-  
 
-  
 
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
+
+
+
     <link rel="top" title="EAGLEDOC 0.01 documentation" href="index.html"/>
         <link rel="up" title="Volante" href="volante.html"/>
         <link rel="next" title="Discover Raspberry Pi Board IP" href="eaglesteeringwheel.html"/>
-        <link rel="prev" title="Volante" href="volante.html"/> 
+        <link rel="prev" title="Volante" href="volante.html"/>
 
-  
+
   <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-   
+
   <div class="wy-grid-for-nav">
 
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
-          
 
-          
+
+
             <a href="index.html" class="icon icon-home"> EAGLEDOC
-          
 
-          
+
+
           </a>
 
-          
-            
-            
-              <div class="version">
-                0.03
-              </div>
-            
-          
 
-          
+
+
+              <div class="version">
+                0.04
+              </div>
+
+
+
+
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -81,19 +78,19 @@
   </form>
 </div>
 
-          
+
         </div>
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+
+
+
+
+
+
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="volante.html">Volante</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Guida per crosscompilare le librerie Qt per Raspberry</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Guida per crosscompilare le librerie Qt per Raspberry</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#materiale-d-uso">Materiale d&#8217;uso</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ready-set-go">Ready, set...go</a></li>
 </ul>
@@ -101,33 +98,34 @@
 <li class="toctree-l2"><a class="reference internal" href="eaglesteeringwheel.html">Discover Raspberry Pi Board IP</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="webplatform.html">Web Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bms.html">BMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sensori.html">Sensori</a></li>
 <li class="toctree-l1"><a class="reference internal" href="muretto.html">Muretto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
 </ul>
 
-            
-          
+
+
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
+
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">EAGLEDOC</a>
-        
+
       </nav>
 
 
-      
+
       <div class="wy-nav-content">
         <div class="rst-content">
-          
+
 
 
 
@@ -146,23 +144,30 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-    
+
       <li><a href="index.html">Docs</a> &raquo;</li>
-        
+
           <li><a href="volante.html">Volante</a> &raquo;</li>
-        
+
       <li>Guida per crosscompilare le librerie Qt per Raspberry</li>
-    
- 
-    
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="sources/crosscompilazione.txt" rel="nofollow"> View page source</a>
+
+
+      </li>
+
   </ul>
 
-  
+
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+
   <img alt="images/wallpaper.png" src="images/wallpaper.png" />
 <div class="section" id="guida-per-crosscompilare-le-librerie-qt-per-raspberry">
 <h1>Guida per crosscompilare le librerie Qt per Raspberry<a class="headerlink" href="#guida-per-crosscompilare-le-librerie-qt-per-raspberry" title="Permalink to this headline">¶</a></h1>
@@ -190,19 +195,19 @@ Come seconda cosa bisogna installare le Qt (versione 5.7), potete recuperarle di
 <blockquote>
 <div><p><a href="#id11"><span class="problematic" id="id12">*</span></a>Accedete alla cartella <strong class="program">scaricati/download</strong>:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> Scaricati/Download
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> Scaricati/Download
 </pre></div>
 </div>
 </div></blockquote>
 <p><a href="#id13"><span class="problematic" id="id14">*</span></a>Cambiate i privilegi di avvio dell&#8217;eseguibile:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>chmod +x qt-unified-linux-x64-online.run
+<div><div class="highlight-sh"><div class="highlight"><pre>chmod +x qt-unified-linux-x64-online.run
 </pre></div>
 </div>
 </div></blockquote>
 <p><a href="#id15"><span class="problematic" id="id16">*</span></a>Eseguite il <strong class="program">run</strong>:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>./qt-unified-linux-x64-online.run
+<div><div class="highlight-sh"><div class="highlight"><pre>./qt-unified-linux-x64-online.run
 </pre></div>
 </div>
 </div></blockquote>
@@ -214,7 +219,7 @@ Come seconda cosa bisogna installare le Qt (versione 5.7), potete recuperarle di
 <p>Proseguite, accettate i termini e installate.</p>
 <p>Una volta installate ritornate nel terminale ed eseguite i seguenti comandi (in ordine):</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>sudo apt-get upgrade
+<div><div class="highlight-sh"><div class="highlight"><pre>sudo apt-get upgrade
 sudo apt-get update
 sudo apt-get install libgl1-mesa-dev
 </pre></div>
@@ -225,20 +230,20 @@ Assicurativi di essere nella cartella generale (se non siete sicuri digitate il 
 <blockquote>
 <div><p><a href="#id17"><span class="problematic" id="id18">*</span></a>Create la cartella <strong class="program">crosscompile-tools</strong>:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>mkdir crosscompile-tools
+<div><div class="highlight-sh"><div class="highlight"><pre>mkdir crosscompile-tools
 </pre></div>
 </div>
 </div></blockquote>
 <p><a href="#id19"><span class="problematic" id="id20">*</span></a>Entrate nella cartella ed eseguite:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> crosscompile-tools
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> crosscompile-tools
 git clone https://github.com/raspberrypi/tools.git
 </pre></div>
 </div>
 </div></blockquote>
 <p><a href="#id21"><span class="problematic" id="id22">*</span></a>Entrate in <strong class="program">Tools</strong> e date i seguenti comandi:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> tools
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> tools
 wget https://raw.githubusercontent.com/riscv/riscv-poky/master/scripts/sysroot-relativelinks.py
 chmod +x sysroot-relativelinks.py
 ./sysroot-relativelinks.py tools
@@ -247,7 +252,7 @@ chmod +x sysroot-relativelinks.py
 </div></blockquote>
 <p><a href="#id23"><span class="problematic" id="id24">*</span></a>Ritornate alla cartella <strong class="program">crosscompile-tools</strong> ed installate la libreria <strong class="program">lib32z1</strong>:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> ..
 sudo apt-get install lib32z1
 </pre></div>
 </div>
@@ -257,13 +262,13 @@ sudo apt-get install lib32z1
 <blockquote>
 <div><p><a href="#id25"><span class="problematic" id="id26">*</span></a>Create la cartella <strong class="program">rasp-pi-rootfs</strong> in <strong class="program">mnt</strong>:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>sudo mkdir /mnt/rasp-pi-rootfs
+<div><div class="highlight-sh"><div class="highlight"><pre>sudo mkdir /mnt/rasp-pi-rootfs
 </pre></div>
 </div>
 </div></blockquote>
 <p><a href="#id27"><span class="problematic" id="id28">*</span></a>Dopo esservi assicurati di essere nella cartella <strong class="program">crosscompile-tools</strong> montate l&#8217;immagine del Raspberry:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>fdisk -l raspbian.img
+<div><div class="highlight-sh"><div class="highlight"><pre>fdisk -l raspbian.img
 </pre></div>
 </div>
 </div></blockquote>
@@ -271,13 +276,13 @@ sudo apt-get install lib32z1
 <img alt="images/ImmaginedelRaspberrymontata.jpg" src="images/ImmaginedelRaspberrymontata.jpg" />
 <p>Identificate il vostro <strong class="program">sector size</strong> e il <strong class="program">blocco di inizio di raspbian.img2</strong>. Date ora questo comando inserendo i vostri dati al posto di <strong class="program">sector size</strong> e <strong class="program">blocco di inizio</strong>:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>sudo mount raspbian.img -o loop,offset<span class="o">=</span><span class="k">$((</span>sector size <span class="o">*</span> blocco di inizio<span class="k">))</span> /mnt/rasp-pi-rootfs/
+<div><div class="highlight-sh"><div class="highlight"><pre>sudo mount raspbian.img -o loop,offset<span class="o">=</span><span class="k">$((</span>sector size <span class="o">*</span> blocco di inizio<span class="k">))</span> /mnt/rasp-pi-rootfs/
 </pre></div>
 </div>
 </div></blockquote>
 <p><a href="#id31"><span class="problematic" id="id32">*</span></a>Accedete ora alla cartella <strong class="program">tools</strong> ed eseguite i seguenti comandi:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> tools
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> tools
 sudo ./sysroot-relativelinks.py /mnt/rasp-pi-rootfs
 <span class="nb">export</span> <span class="nv">RPI_SYSROOT</span><span class="o">=</span>/mnt/rasp-pi-rootfs
 <span class="nb">export</span> <span class="nv">RPI_TOOLCHAIN</span><span class="o">=</span>~/crosscompile-tools/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin/arm-linux-gnueabihf-
@@ -286,8 +291,8 @@ sudo ./sysroot-relativelinks.py /mnt/rasp-pi-rootfs
 </div></blockquote>
 <p><a href="#id33"><span class="problematic" id="id34">*</span></a>Adesso comincia il processo che potrebbe dare più problemi:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Qt/5.7/Src
-./configure -opengl es2 -device linux-rasp-pi-g++ -device-option <span class="nv">CROSS_COMPILE</span><span class="o">=</span><span class="se">\$</span>RPI_TOOLCHAIN -sysroot <span class="nv">$RPI_SYSROOT</span> -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> ~/Qt/5.7/Src
+./configure -opengl es2 -device linux-rasp-pi-g++ -device-option <span class="nv">CROSS_COMPILE</span><span class="o">=</span><span class="se">\$</span>RPI_TOOLCHAIN -sysroot $RPI_SYSROOT -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi
 </pre></div>
 </div>
 </div></blockquote>
@@ -298,32 +303,32 @@ sudo ./sysroot-relativelinks.py /mnt/rasp-pi-rootfs
 <blockquote>
 <div><p><a href="#id35"><span class="problematic" id="id36">*</span></a>Tornate alla schermata proncipale:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span>
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p><a href="#id37"><span class="problematic" id="id38">*</span></a>Muovetevi fino alla seguente cartella:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> ../../mnt/rasp-pi-rootfs/opt/vc/lib
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> ../../mnt/rasp-pi-rootfs/opt/vc/lib
 </pre></div>
 </div>
 </div></blockquote>
 <p><a href="#id39"><span class="problematic" id="id40">*</span></a>Controllate di avere il file (<cite>ls</cite>) libbrcmGLESv2.so, se è presente create il link con questo comando:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>sudo ln -s libbrcmGLESv2.so libGLESv2.so
+<div><div class="highlight-sh"><div class="highlight"><pre>sudo ln -s libbrcmGLESv2.so libGLESv2.so
 </pre></div>
 </div>
 </div></blockquote>
 <p><a href="#id41"><span class="problematic" id="id42">*</span></a>Tornate ora alla cartella <strong class="program">src</strong>:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span>
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span>
 <span class="nb">cd</span> Qt/5.7/Src
 </pre></div>
 </div>
 </div></blockquote>
 <dl class="docutils">
 <dt><a href="#id43"><span class="problematic" id="id44">*</span></a>Rieseguite il <strong class="program">configure</strong> precedente:</dt>
-<dd><div class="first last highlight-sh"><div class="highlight"><pre><span></span>./configure -opengl es2 -device linux-rasp-pi-g++ -device-option <span class="nv">CROSS_COMPILE</span><span class="o">=</span><span class="se">\$</span>RPI_TOOLCHAIN -sysroot <span class="nv">$RPI_SYSROOT</span> -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi
+<dd><div class="first last highlight-sh"><div class="highlight"><pre>./configure -opengl es2 -device linux-rasp-pi-g++ -device-option <span class="nv">CROSS_COMPILE</span><span class="o">=</span>$RPI_TOOLCHAIN -sysroot $RPI_SYSROOT -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi
 </pre></div>
 </div>
 </dd>
@@ -334,7 +339,7 @@ sudo ./sysroot-relativelinks.py /mnt/rasp-pi-rootfs
 <p>Adesso bisogna aspettare: il seguente processo infatti non richiederà meno di 40-50 minuti, anche in base alle caratteristiche della vostra macchina, se ci mette meno di questo tempo o se vengono errori al completamento dell&#8217;operazione probabilmente avete sbagliato qualcosa e dovete fare tutto da capo (il mio consiglio è di cancellare anche le Qt e l&#8217;immagine del Raspberry).
 Eseguite i seguenti comandi:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>sudo make
+<div><div class="highlight-sh"><div class="highlight"><pre>sudo make
 sudo make install
 </pre></div>
 </div>
@@ -342,7 +347,7 @@ sudo make install
 <p>A questo punto aprite QtCreator manualmente o da terminale, è indifferente, lo trovate nel percorso <cite>Qt/Tools/QtCreator/bin</cite>.
 Ora, nella <strong class="program">toolbar</strong> andate su <strong class="program">Tools</strong>, <strong class="program">Options...</strong>, <strong class="program">Build &amp; Run</strong>, accedete alla tab <strong class="program">Compilers</strong> e premette <strong class="program">Add</strong>: selezionate <strong class="program">GCC</strong> e nel menù a tendina che vi compare selezionate <strong class="program">C++</strong>. In <strong class="program">compiler path</strong> inserite il seguente percorso:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>/home/nomeaccount/crosscompile-tools/tools/arma-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-g++
+<div><div class="highlight-sh"><div class="highlight"><pre>/home/nomeaccount/crosscompile-tools/tools/arma-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-g++
 </pre></div>
 </div>
 </div></blockquote>
@@ -350,7 +355,7 @@ Ora, nella <strong class="program">toolbar</strong> andate su <strong class="pro
 <img alt="images/ImpostazioniQtCreator.jpg" src="images/ImpostazioniQtCreator.jpg" />
 <p>Ora andate nella tab <strong class="program">Qt Versions</strong> e premete <strong class="program">Add</strong> e inserite il percorso:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span></span>/mnt/rasp-pi-rootfs/usr/local/qt5pi/bin
+<div><div class="highlight-sh"><div class="highlight"><pre>/mnt/rasp-pi-rootfs/usr/local/qt5pi/bin
 </pre></div>
 </div>
 </div></blockquote>
@@ -363,20 +368,20 @@ Ora, nella <strong class="program">toolbar</strong> andate su <strong class="pro
 
            </div>
            <div class="articleComments">
-            
+
            </div>
           </div>
           <footer>
-  
+
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+
         <a href="eaglesteeringwheel.html" class="btn btn-neutral float-right" title="Discover Raspberry Pi Board IP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
+
+
         <a href="volante.html" class="btn btn-neutral" title="Volante" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+
     </div>
-  
+
 
   <hr/>
 
@@ -386,7 +391,7 @@ Ora, nella <strong class="program">toolbar</strong> andate su <strong class="pro
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
 </footer>
 
@@ -396,10 +401,10 @@ Ora, nella <strong class="program">toolbar</strong> andate su <strong class="pro
     </section>
 
   </div>
-  
 
 
-  
+
+
 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
@@ -415,21 +420,21 @@ Ora, nella <strong class="program">toolbar</strong> andate su <strong class="pro
       <script type="text/javascript" src="static/underscore.js"></script>
       <script type="text/javascript" src="static/doctools.js"></script>
 
-  
 
-  
-  
+
+
+
     <script type="text/javascript" src="static/js/theme.js"></script>
-  
 
-  
-  
+
+
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-   
+
 
 </body>
 </html>

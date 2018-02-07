@@ -12,13 +12,13 @@ Materiale d'uso
 Prima di cominciare il nostro viaggio attraverso il selvaggio mondo della crosscompilazione lasciatemi tediarvi ancora un attimo indicandovi il :program:`necessario` per la buona riuscita dell'obiettivo:
 
 	*Ubuntu 16.04.3 LTS x64
- 	
+
  	*Qt 5.7
- 	
+
  	*Immagine di :program:`Rasbian Stretch` basato su :program:`Debian`
- 	
+
  	*Connessione stabile e veloce (vogliate bene a voi stessi)
- 	
+
  	*Pazienza (questa è facoltativa...dipende dalla quantità di computer a vostra disposizione)
 
 Questa guida è basata per procedere con il materiale elencato precedentemente, se utilizzate versioni diverse di Ubuntu e/o delle Qt non vi assicuriamo la buona riuscita della crosscompilazione.
@@ -37,13 +37,13 @@ Come seconda cosa bisogna installare le Qt (versione 5.7), potete recuperarle di
 Ora aprite il terminale (CTRL+ALT+T) ed eseguite i seguenti comandi:
 
 	*Accedete alla cartella :program:`scaricati/download`:
-		
+
 		.. code-block:: sh
-	
+
 			cd Scaricati/Download
 
  	*Cambiate i privilegi di avvio dell'eseguibile:
- 		
+
  		.. code-block:: sh
 
 			chmod +x qt-unified-linux-x64-online.run
@@ -78,13 +78,13 @@ dove vi verrà chiesto di continuare premete :program:`ENTER`.
 Assicurativi di essere nella cartella generale (se non siete sicuri digitate il comando `cd` sul terminale), per continuare ora:
 
 	*Create la cartella :program:`crosscompile-tools`:
-		
+
 		.. code-block:: sh
 
 			mkdir crosscompile-tools
 
 	*Entrate nella cartella ed eseguite:
-		
+
 		.. code-block:: sh
 
 			cd crosscompile-tools
@@ -102,21 +102,21 @@ Assicurativi di essere nella cartella generale (se non siete sicuri digitate il 
 	*Ritornate alla cartella :program:`crosscompile-tools` ed installate la libreria :program:`lib32z1`:
 
 		.. code-block:: sh
-			
+
 			cd ..
 			sudo apt-get install lib32z1
 
 Bene, ora scaricate l'immagine del Raspberry che potete trovare a questo link https://www.raspberrypi.org/downloads/raspbian/, è consigliata la versione lite, ma siete liberi di provare la versione completa, dovrebbe funzionare ugualmente. Copiate poi l'immagine nella cartella :program:`crosscompile-tools`, vi consiglio caldamente di rinominare l'immagine in ":program:`raspbian.img`" per questioni di semplicità nell'eseguire i prossimi comandi. Fatto ciò:
 
 	*Create la cartella :program:`rasp-pi-rootfs` in :program:`mnt`:
-		
+
 		.. code-block:: sh
 
 			sudo mkdir /mnt/rasp-pi-rootfs
 
 
  	*Dopo esservi assicurati di essere nella cartella :program:`crosscompile-tools` montate l'immagine del Raspberry:
- 	
+
 	 	.. code-block:: sh
 
 			fdisk -l raspbian.img
@@ -133,7 +133,7 @@ Bene, ora scaricate l'immagine del Raspberry che potete trovare a questo link ht
 			sudo mount raspbian.img -o loop,offset=$((sector size * blocco di inizio)) /mnt/rasp-pi-rootfs/
 
 	*Accedete ora alla cartella :program:`tools` ed eseguite i seguenti comandi:
-		
+
 		.. code-block:: sh
 
 			cd tools
@@ -142,9 +142,9 @@ Bene, ora scaricate l'immagine del Raspberry che potete trovare a questo link ht
 			export RPI_TOOLCHAIN=~/crosscompile-tools/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin/arm-linux-gnueabihf-
 
 	*Adesso comincia il processo che potrebbe dare più problemi:
-	
+
 		.. code-block:: sh
-		
+
 			cd ~/Qt/5.7/Src
 			./configure -opengl es2 -device linux-rasp-pi-g++ -device-option CROSS_COMPILE=\$RPI_TOOLCHAIN -sysroot $RPI_SYSROOT -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi
 
@@ -162,19 +162,19 @@ In realtà, le librerie indicate come mancanti, sono presenti nel vostro compute
 			cd
 
  	*Muovetevi fino alla seguente cartella:
- 	
+
  		.. code-block:: sh
 
 			cd ../../mnt/rasp-pi-rootfs/opt/vc/lib
 
 	*Controllate di avere il file (`ls`) libbrcmGLESv2.so, se è presente create il link con questo comando:
-	
+
 		.. code-block:: sh
 
 			sudo ln -s libbrcmGLESv2.so libGLESv2.so
 
 	*Tornate ora alla cartella :program:`src`:
-		
+
 		.. code-block:: sh
 
 			cd
@@ -187,7 +187,7 @@ In realtà, le librerie indicate come mancanti, sono presenti nel vostro compute
 
 	Tranquilli, dovrebbe metterci molto meno rispetto a prima. Una volta fatto ciò dovrebbe comparirvi la seguente schermata:
 
-	
+
 	.. image:: /images/Configurefinalizzato.png
 
 Adesso bisogna aspettare: il seguente processo infatti non richiederà meno di 40-50 minuti, anche in base alle caratteristiche della vostra macchina, se ci mette meno di questo tempo o se vengono errori al completamento dell'operazione probabilmente avete sbagliato qualcosa e dovete fare tutto da capo (il mio consiglio è di cancellare anche le Qt e l'immagine del Raspberry).

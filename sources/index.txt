@@ -14,9 +14,11 @@ Questa è la raccolta delle documentazioni usate dal Team Eagle
 Contents:
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 6
 
    volante
+
+   webplatform
 
    bms
 
@@ -29,12 +31,12 @@ Contents:
 
 Le relative Repository sono accessibili dai seguenti link:
 
-*Documentazione: https://github.com/eagletrt/eagletrt.github.io
+	*Documentazione: Documentazione generata con sphinx-doc https://github.com/eagletrt/eagletrt.github.io
 
-*Telemetria: https://github.com/eagletrt/eagle-telemetria
+	*Telemetria: Contiene il software del muretto, del volante e il simulatore. https://github.com/eagletrt/eagle-telemetria
 
-*BMS: https://github.com/eagletrt/eagle-bms
+	*BMS: https://github.com/eagletrt/eagle-bms
 
-*Sensori: https://github.com/eagletrt/eagle-sensori
+	*Sensori: https://github.com/eagletrt/eagle-sensori
 
-*Web-Platform: https://github.com/eagletrt/eagle-webplatform
+	*Web-Platform: Codice della piattaforma web per visualizzare report e acquisire dati https://github.com/eagletrt/eagle-webplatform
