@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Help &mdash; EAGLEDOC 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="EAGLEDOC 0.1 documentation" href="index.html"/>
+        <link rel="prev" title="Muretto" href="muretto.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> EAGLEDOC
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="volante.html">Volante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webplatform.html">Web Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bms.html">BMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sensori.html">Sensori</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muretto.html">Muretto</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-sphinx">Install Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-project">Create a Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-file-rst">Create a file.rst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-project">Build Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#themes-from-github">Themes From GitHub</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EAGLEDOC</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Help</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/help.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <img alt="_images/wallpaper.png" src="_images/wallpaper.png" />
+<div class="section" id="help">
+<h1>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h1>
+<p>Qui troverai tutto quello che serve per installare Sphinx e creare pagine HTML</p>
+<div class="section" id="install-sphinx">
+<h2>Install Sphinx<a class="headerlink" href="#install-sphinx" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install python-sphinx
+mkdir sphinx-project
+<span class="nb">cd</span> sphinx-project
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-project">
+<h2>Create a Project<a class="headerlink" href="#create-a-project" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh"><div class="highlight"><pre>sphinx-quickstart
+</pre></div>
+</div>
+<p>Ora da terminale verrà richiesto di creare il progetto e bisognerà completare questi campi:</p>
+<blockquote>
+<div><p><a href="#id1"><span class="problematic" id="id2">*</span></a>Project Name</p>
+<p><a href="#id3"><span class="problematic" id="id4">*</span></a>Author Name</p>
+<p><a href="#id5"><span class="problematic" id="id6">*</span></a>Project version</p>
+</div></blockquote>
+<p>Gli altri basterà skipparli con enter.
+Una volta terminata la creazione dei file necessari bisogna testare se è andato tutto a buon fine aprendo in <cite>_build/html</cite> l&#8217;index.html</p>
+</div>
+<div class="section" id="create-a-file-rst">
+<h2>Create a file.rst<a class="headerlink" href="#create-a-file-rst" title="Permalink to this headline">¶</a></h2>
+<p>Per generare nuove pagine bisogna creare un nuovo file <cite>.rst</cite> dove andranno scritti tutti i tag</p>
+<div class="highlight-sh"><div class="highlight"><pre>touch file.rst
+</pre></div>
+</div>
+<p>Ora passo a passo verrano mostrati i comandi necessari per creare una pagina:</p>
+<blockquote>
+<div><blockquote>
+<div><ul>
+<li><p class="first">Per quanto riguarda il titolo basterà scriverlo e nella riga sottostante mettere tanti &#8220;=&#8221; quanto la lunghezza della stringa del titolo</p>
+</li>
+<li><p class="first">Per aggiungere immagini alla pagina basterà creare una directory nella cartella del progetto e inserire le immagini</p>
+<dl class="directive">
+<dt id="directive-image">
+<code class="descname">.. image::</code><code class="descclassname"> immagine</code><a class="headerlink" href="#directive-image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esempio:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. image:: /images/wallpaper.png
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first">Per aggiungere scritte testuali basterà scrivere il testo e verrà visualizzato</p>
+</li>
+<li><p class="first">Per aggiungere note</p>
+<blockquote>
+<div><dl class="directive">
+<dt id="directive-note">
+<code class="descname">.. note::</code><code class="descclassname"> </code><a class="headerlink" href="#directive-note" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esempio:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. note::
+
+                this is a note
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</li>
+<li><p class="first">Per aggiungere warning</p>
+<blockquote>
+<div><dl class="directive">
+<dt id="directive-warning">
+<code class="descname">.. warning::</code><code class="descclassname"> </code><a class="headerlink" href="#directive-warning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esempio:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. warning::
+
+                this is a warning
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</li>
+<li><p class="first">Per aggiungere codice basterà specificare il tipo di linguaggio</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="directive">
+<dt id="directive-code-block">
+<code class="descname">.. code-block::</code><code class="descclassname"> linguaggio</code><a class="headerlink" href="#directive-code-block" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esempio:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. code-block:: sh
+
+                this is a code
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+<ul class="simple">
+<li>Per rendere visualizabile la pagina html basterà in <cite>index.rst</cite> linkare il file inserendo in Contents il nome senza estensione ad esempio <cite>file</cite></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="build-project">
+<h2>Build Project<a class="headerlink" href="#build-project" title="Permalink to this headline">¶</a></h2>
+<p>Ora per creare effettivamente i file html si usa il comando make</p>
+<div class="highlight-sh"><div class="highlight"><pre>sudo make clean
+sudo make html
+</pre></div>
+</div>
+<p>Per aprire il sito bisogna spostarsi su <cite>_build/html</cite> e aprire index.html</p>
+</div>
+<div class="section" id="themes-from-github">
+<h2>Themes From GitHub<a class="headerlink" href="#themes-from-github" title="Permalink to this headline">¶</a></h2>
+<p>Se non ancora installato scaricare pip oppure skippare al secondo comando</p>
+<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install python-pip
+pip install sphinx_rtd_theme
+</pre></div>
+</div>
+<p>In <cite>conf.py</cite> modificare come segue</p>
+<blockquote>
+<div><p><a href="#id7"><span class="problematic" id="id8">*</span></a>import sphinx_rtd_theme</p>
+<p><a href="#id9"><span class="problematic" id="id10">*</span></a>html_theme = &#8220;sphinx_rtd_theme&#8221;</p>
+<p><a href="#id11"><span class="problematic" id="id12">*</span></a>html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]</p>
+</div></blockquote>
+<p>Questa procedura viene utilizzata per scaricare in locale sul pc ma effettivamente non vengono caricati i file nella directory del progetto, esiste un altro modo per caricarlo basta guardare su sphinx-doc dove oltre a questo è possibile vedere tutti i comandi che ho illustrato qui e inoltre è possibile vedere i file source di ogni singola pagina per impararne di nuovi.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="muretto.html" class="btn btn-neutral" title="Muretto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Luca Martinelli.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
