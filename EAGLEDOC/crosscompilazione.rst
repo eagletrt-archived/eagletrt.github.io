@@ -203,7 +203,7 @@ Ora, nella :program:`toolbar` andate su :program:`Tools`, :program:`Options...`,
 
 	.. code-block:: sh
 
-		/home/nomeaccount/crosscompile-tools/tools/arma-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-g++
+		/home/nomeaccount/crosscompile-tools/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-g++
 
 al posto di `nomeaccount` inserite il nome del vostro account. Questo dovrebbe essere il risultato:
 
