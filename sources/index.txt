@@ -8,13 +8,15 @@
 Welcome to EAGLEDOC's documentation!
 ====================================
 
-Questa è la raccolta delle documentazioni usate dal Team Eagle
+Questa è la raccolta delle documentazioni usate dall' `Eagle Trento Racing Team`
 
 
 Contents:
 
 .. toctree::
    :maxdepth: 6
+
+   design
 
    volante
 

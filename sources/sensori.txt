@@ -3,7 +3,7 @@
 Sensori
 =======
 
-Qui troverai tutto quello che ti serve per i sensori
+Qui troverai qualcosa che potrebbe servirti per i sensori
 
 Contents:
 
@@ -11,5 +11,3 @@ Contents:
    :maxdepth: 3
 
    SimSensori
-
-

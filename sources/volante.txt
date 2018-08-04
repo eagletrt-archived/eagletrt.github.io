@@ -3,7 +3,7 @@
 Volante
 =======
 
-Qui troverai tutto quello che ti serve per il volante
+Qui troverai qualcosa che potrebbe servirti per il Volante
 
 Contents:
 
@@ -11,4 +11,4 @@ Contents:
    :maxdepth: 3
 
    crosscompilazione
-   eaglesteeringwheel
+   turnOnSteer

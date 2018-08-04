@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -33,7 +31,7 @@
 
   
     <link rel="top" title="EAGLEDOC 0.1 documentation" href="#"/>
-        <link rel="next" title="Volante" href="volante.html"/> 
+        <link rel="next" title="Design Presentation" href="design.html"/> 
 
   
   <script src="static/js/modernizr.min.js"></script>
@@ -42,7 +40,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -62,7 +59,7 @@
             
             
               <div class="version">
-                0.5
+                0.6
               </div>
             
           
@@ -83,10 +80,8 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design Presentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="volante.html">Volante</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webplatform.html">Web Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bms.html">BMS</a></li>
@@ -105,10 +100,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">EAGLEDOC</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">EAGLEDOC</a>
       </nav>
 
 
@@ -117,40 +110,21 @@
         <div class="rst-content">
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="#">Docs</a> &raquo;</li>
-        
-      <li>Welcome to EAGLEDOC&#8217;s documentation!</li>
-    
-    
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>Welcome to EAGLEDOC&#8217;s documentation!</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="sources/index.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -159,19 +133,22 @@
   <img alt="images/wallpaper.png" src="images/wallpaper.png" />
 <div class="section" id="welcome-to-eagledoc-s-documentation">
 <h1>Welcome to EAGLEDOC&#8217;s documentation!<a class="headerlink" href="#welcome-to-eagledoc-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Questa è la raccolta delle documentazioni usate dal Team Eagle</p>
+<p>Questa è la raccolta delle documentazioni usate dall&#8217; <cite>Eagle Trento Racing Team</cite></p>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design Presentation</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="volante.html">Volante</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="crosscompilazione.html">Guida per crosscompilare le librerie Qt per Raspberry</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="crosscompilazione.html#materiale-d-uso">Materiale d&#8217;uso</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crosscompilazione.html#ready-set-go">Ready, set...go</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eaglesteeringwheel.html">Eagle Steering Wheel</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eaglesteeringwheel.html#collegamento-al-volante-via-ssh">Collegamento al Volante via SSH</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eaglesteeringwheel.html#effettuare-modifiche-al-codice-e-fare-il-deploy-dell-eseguibile">Effettuare modifiche al codice e fare il deploy dell&#8217;eseguibile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="turnOnSteer.html">Eagle Steering Wheel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="turnOnSteer.html#collegamento-al-volante-via-ssh">Collegamento al Volante via SSH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="turnOnSteer.html#effettuare-modifiche-al-codice-e-fare-il-deploy-dell-eseguibile">Effettuare modifiche al codice e fare il deploy dell&#8217;eseguibile</a></li>
 </ul>
 </li>
 </ul>
@@ -197,11 +174,13 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="muretto.html">Muretto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help.html#modify-rst">Modify .rst</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help.html#install-sphinx">Install Sphinx</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help.html#create-a-project">Create a Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help.html#create-a-file-rst">Create a file.rst</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help.html#build-project">Build Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help.html#themes-from-github">Themes From GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help.html#output-to-git-hub">Output To Git Hub</a></li>
 </ul>
 </li>
 </ul>
@@ -218,15 +197,12 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="volante.html" class="btn btn-neutral float-right" title="Volante" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="design.html" class="btn btn-neutral float-right" title="Design Presentation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -236,11 +212,10 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Luca Martinelli.
+        &copy; Copyright 2018, Eagle Trento Racing Team.
 
     </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  </div> 
 
 </footer>
 
@@ -261,8 +236,7 @@
             VERSION:'0.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="static/jquery.js"></script>

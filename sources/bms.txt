@@ -3,16 +3,15 @@ BMS
 
 .. image:: /images/wallpaper.png
 
-Qui troverai tutto quello che ti serve per il BMS
+Qui troverai qualcosa che potrebbe servirti per il BMS
 
 
 .. code-block:: bash
-	
+
 	some code
 
-.. note:: 
+.. note::
 	a note
 
-.. warning:: 
+.. warning::
 	a warning
-

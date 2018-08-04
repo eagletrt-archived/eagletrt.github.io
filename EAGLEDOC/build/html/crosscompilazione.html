@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -26,7 +24,7 @@
 
   
   
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   
 
   
@@ -34,17 +32,16 @@
   
     <link rel="top" title="EAGLEDOC 0.1 documentation" href="index.html"/>
         <link rel="up" title="Volante" href="volante.html"/>
-        <link rel="next" title="Eagle Steering Wheel" href="eaglesteeringwheel.html"/>
+        <link rel="next" title="Eagle Steering Wheel" href="turnOnSteer.html"/>
         <link rel="prev" title="Volante" href="volante.html"/> 
 
   
-  <script src="_static/js/modernizr.min.js"></script>
+  <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -64,7 +61,7 @@
             
             
               <div class="version">
-                0.5
+                0.6
               </div>
             
           
@@ -85,17 +82,15 @@
           
             
             
-              
-            
-            
-              <ul class="current">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design Presentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="volante.html">Volante</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="">Guida per crosscompilare le librerie Qt per Raspberry</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#materiale-d-uso">Materiale d&#8217;uso</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ready-set-go">Ready, set...go</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eaglesteeringwheel.html">Eagle Steering Wheel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="turnOnSteer.html">Eagle Steering Wheel</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="webplatform.html">Web Platform</a></li>
@@ -115,10 +110,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">EAGLEDOC</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">EAGLEDOC</a>
       </nav>
 
 
@@ -127,48 +120,29 @@
         <div class="rst-content">
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
           <li><a href="volante.html">Volante</a> &raquo;</li>
-        
-      <li>Guida per crosscompilare le librerie Qt per Raspberry</li>
-    
-    
+      
+    <li>Guida per crosscompilare le librerie Qt per Raspberry</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/crosscompilazione.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <img alt="_images/wallpaper.png" src="_images/wallpaper.png" />
+  <img alt="images/wallpaper.png" src="images/wallpaper.png" />
 <div class="section" id="guida-per-crosscompilare-le-librerie-qt-per-raspberry">
 <h1>Guida per crosscompilare le librerie Qt per Raspberry<a class="headerlink" href="#guida-per-crosscompilare-le-librerie-qt-per-raspberry" title="Permalink to this headline">¶</a></h1>
 <p>Le Qt sono librerie grafiche del c++ che abbiamo usato per programmare l&#8217;interfaccia del volante delle nostro monoposto. Ma cosa vuol dire crosscompilare? E perché per Raspberry? La risposta è molto semplice: per mostrare la nostra <strong class="program">stupenda</strong> interfaccia utilizziamo il <strong class="program">single-board computer</strong> noto come Raspberry. Questa scheda però non è uguale uguale ai nostri computer, essi infatti utilizzano un processore Intel che, come è facilmente intuibile, utilizza un Assembly di tipo Intel che è strutturalmente diverso dall&#8217;Assembly ARM sul quale è basato il processore del nostro Raspberry. Il problema principale è, quindi, che nel momento in cui noi compiliamo il nostro programma che utilizza le Qt, creiamo un eseguibile per Assembly Intel (che ovviamente il Raspberry non è in grado di eseguire), ecco quindi che entra in gioco la crosscompilazione. Avete già capito di cosa si tratta? Nel caso non lo aveste ancora fatto ve lo dico io: la crosscompilazione serve per creare un eseguibile per Assembly ARM e quindi <strong class="program">suitable</strong> per il nostro Raspberry.</p>
@@ -188,14 +162,14 @@
 <h2>Ready, set...go<a class="headerlink" href="#ready-set-go" title="Permalink to this headline">¶</a></h2>
 <p>Bene, siamo pronti per cominciare la crosscompilazione (finalmente direte voi...bè, ne riparliamo a operazione conclusa).
 Per prima cosa bisogna installare Ubuntu 16.04.3 LTS x64, di cui potete recuperarne l&#8217;immagine a questo indirizzo <a class="reference external" href="https://www.ubuntu-it.org/download">https://www.ubuntu-it.org/download</a>. Vi comparirà la seguente schermata:</p>
-<img alt="_images/DownloadUbuntu.png" src="_images/DownloadUbuntu.png" />
+<img alt="images/DownloadUbuntu.png" src="images/DownloadUbuntu.png" />
 <p>Si può installare Ubuntu anche su macchina virtuale, sinceramente, però, lo sconsiglio a causa della lentezza e dei problemi di spazio che potrebbero generarsi.
 Come seconda cosa bisogna installare le Qt (versione 5.7), potete recuperarle direttamente dal sito <a class="reference external" href="https://download.qt.io/official_releases/online_installers/">https://download.qt.io/official_releases/online_installers/</a>. Selezionate &#8220;qt-unified-linux-x64-online.run&#8221;.</p>
 <p>Ora aprite il terminale (CTRL+ALT+T) ed eseguite i seguenti comandi:</p>
 <blockquote>
-<div><p><a href="#id11"><span class="problematic" id="id12">*</span></a>Accedete alla cartella <strong class="program">scaricati/download</strong>:</p>
+<div><p><a href="#id11"><span class="problematic" id="id12">*</span></a>Accedete alla cartella <strong class="program">Scaricati/Download</strong>:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> Scaricati/Download
+<div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> Scaricati
 </pre></div>
 </div>
 </div></blockquote>
@@ -213,9 +187,9 @@ Come seconda cosa bisogna installare le Qt (versione 5.7), potete recuperarle di
 </div></blockquote>
 </div></blockquote>
 <p>Una volta fatto ciò vi comparirà una schermata di questo tipo:</p>
-<img alt="_images/ConfigurazioneQt.jpg" src="_images/ConfigurazioneQt.jpg" />
+<img alt="images/ConfigurazioneQt.jpg" src="images/ConfigurazioneQt.jpg" />
 <p>Continuate finché non arriverete alla schermata di scelta delle Qt e scegliete, necessariamente, le seguenti estensioni (le altre sono opzionali):</p>
-<img alt="_images/SceltaestenzioniQt.jpg" src="_images/SceltaestenzioniQt.jpg" />
+<img alt="images/SceltaestenzioniQt.jpg" src="images/SceltaestenzioniQt.jpg" />
 <p>Proseguite, accettate i termini e installate.</p>
 <p>Una volta installate ritornate nel terminale ed eseguite i seguenti comandi (in ordine):</p>
 <blockquote>
@@ -253,7 +227,7 @@ chmod +x sysroot-relativelinks.py
 <p><a href="#id23"><span class="problematic" id="id24">*</span></a>Ritornate alla cartella <strong class="program">crosscompile-tools</strong> ed installate la libreria <strong class="program">lib32z1</strong>:</p>
 <blockquote>
 <div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> ..
-sudo apt-get install lib32z1
+sudo apt-get install lib32z1-dev
 </pre></div>
 </div>
 </div></blockquote>
@@ -273,7 +247,7 @@ sudo apt-get install lib32z1
 </div>
 </div></blockquote>
 <p><a href="#id29"><span class="problematic" id="id30">*</span></a>Ora il passaggio può risultare un pochino complicato, cercherò di spiegarvelo nel modo più semplice possibile; dopo aver eseguito il comando di montaggio vi apparirà la seguente schermata:</p>
-<img alt="_images/ImmaginedelRaspberrymontata.jpg" src="_images/ImmaginedelRaspberrymontata.jpg" />
+<img alt="images/ImmaginedelRaspberrymontata.jpg" src="images/ImmaginedelRaspberrymontata.jpg" />
 <p>Identificate il vostro <strong class="program">sector size</strong> e il <strong class="program">blocco di inizio di raspbian.img2</strong>. Date ora questo comando inserendo i vostri dati al posto di <strong class="program">sector size</strong> e <strong class="program">blocco di inizio</strong>:</p>
 <blockquote>
 <div><div class="highlight-sh"><div class="highlight"><pre>sudo mount raspbian.img -o loop,offset<span class="o">=</span><span class="k">$((</span>sector size <span class="o">*</span> blocco di inizio<span class="k">))</span> /mnt/rasp-pi-rootfs/
@@ -292,12 +266,12 @@ sudo ./sysroot-relativelinks.py /mnt/rasp-pi-rootfs
 <p><a href="#id33"><span class="problematic" id="id34">*</span></a>Adesso comincia il processo che potrebbe dare più problemi:</p>
 <blockquote>
 <div><div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> ~/Qt/5.7/Src
-./configure -opengl es2 -device linux-rasp-pi-g++ -device-option <span class="nv">CROSS_COMPILE</span><span class="o">=</span><span class="se">\$</span>RPI_TOOLCHAIN -sysroot $RPI_SYSROOT -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi
+./configure -opengl es2 -device linux-rasp-pi-g++ -device-option <span class="nv">CROSS_COMPILE</span><span class="o">=</span>$RPI_TOOLCHAIN -sysroot $RPI_SYSROOT -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi
 </pre></div>
 </div>
 </div></blockquote>
 <p>Dato questo comando il terminale dovrebbe rimanere <strong class="program">off limits</strong> creando il <strong class="program">qmake</strong>, perciò non preoccupatevi se vi sembra metterci tanto. In realtà, una volta completata la creazione del file, dovreste avere un errore di questo tipo (se non lo avete, tanto meglio):</p>
-<img alt="_images/Schermatadierrore.jpg" src="_images/Schermatadierrore.jpg" />
+<img alt="images/Schermatadierrore.jpg" src="images/Schermatadierrore.jpg" />
 </div></blockquote>
 <p>In realtà, le librerie indicate come mancanti, sono presenti nel vostro computer, solo che sono chiamate in modo diverso da quello richiesto, per risolvere, perciò, basta creare un link a queste:</p>
 <blockquote>
@@ -334,7 +308,7 @@ sudo ./sysroot-relativelinks.py /mnt/rasp-pi-rootfs
 </dd>
 </dl>
 <p>Tranquilli, dovrebbe metterci molto meno rispetto a prima. Una volta fatto ciò dovrebbe comparirvi la seguente schermata:</p>
-<img alt="_images/Configurefinalizzato.png" src="_images/Configurefinalizzato.png" />
+<img alt="images/Configurefinalizzato.png" src="images/Configurefinalizzato.png" />
 </div></blockquote>
 <p>Adesso bisogna aspettare: il seguente processo infatti non richiederà meno di 40-50 minuti, anche in base alle caratteristiche della vostra macchina, se ci mette meno di questo tempo o se vengono errori al completamento dell&#8217;operazione probabilmente avete sbagliato qualcosa e dovete fare tutto da capo (il mio consiglio è di cancellare anche le Qt e l&#8217;immagine del Raspberry).
 Eseguite i seguenti comandi:</p>
@@ -347,12 +321,12 @@ sudo make install
 <p>A questo punto aprite QtCreator manualmente o da terminale, è indifferente, lo trovate nel percorso <cite>Qt/Tools/QtCreator/bin</cite>.
 Ora, nella <strong class="program">toolbar</strong> andate su <strong class="program">Tools</strong>, <strong class="program">Options...</strong>, <strong class="program">Build &amp; Run</strong>, accedete alla tab <strong class="program">Compilers</strong> e premette <strong class="program">Add</strong>: selezionate <strong class="program">GCC</strong> e nel menù a tendina che vi compare selezionate <strong class="program">C++</strong>. In <strong class="program">compiler path</strong> inserite il seguente percorso:</p>
 <blockquote>
-<div><div class="highlight-sh"><div class="highlight"><pre>/home/nomeaccount/crosscompile-tools/tools/arma-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-g++
+<div><div class="highlight-sh"><div class="highlight"><pre>/home/nomeaccount/crosscompile-tools/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-g++
 </pre></div>
 </div>
 </div></blockquote>
 <p>al posto di <cite>nomeaccount</cite> inserite il nome del vostro account. Questo dovrebbe essere il risultato:</p>
-<img alt="_images/ImpostazioniQtCreator.jpg" src="_images/ImpostazioniQtCreator.jpg" />
+<img alt="images/ImpostazioniQtCreator.jpg" src="images/ImpostazioniQtCreator.jpg" />
 <p>Ora andate nella tab <strong class="program">Qt Versions</strong> e premete <strong class="program">Add</strong> e inserite il percorso:</p>
 <blockquote>
 <div><div class="highlight-sh"><div class="highlight"><pre>/mnt/rasp-pi-rootfs/usr/local/qt5pi/bin
@@ -367,18 +341,15 @@ Ora, nella <strong class="program">toolbar</strong> andate su <strong class="pro
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="eaglesteeringwheel.html" class="btn btn-neutral float-right" title="Eagle Steering Wheel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="turnOnSteer.html" class="btn btn-neutral float-right" title="Eagle Steering Wheel" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="volante.html" class="btn btn-neutral" title="Volante" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="volante.html" class="btn btn-neutral" title="Volante" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -387,11 +358,10 @@ Ora, nella <strong class="program">toolbar</strong> andate su <strong class="pro
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Luca Martinelli.
+        &copy; Copyright 2018, Eagle Trento Racing Team.
 
     </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  </div> 
 
 </footer>
 
@@ -412,19 +382,18 @@ Ora, nella <strong class="program">toolbar</strong> andate su <strong class="pro
             VERSION:'0.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
+            HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
 
   
 
   
   
-    <script type="text/javascript" src="_static/js/theme.js"></script>
+    <script type="text/javascript" src="static/js/theme.js"></script>
   
 
   

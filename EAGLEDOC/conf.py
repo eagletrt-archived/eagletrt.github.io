@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'EAGLEDOC'
-copyright = u'2018, Luca Martinelli'
+copyright = u'2018, Eagle Trento Racing Team'
 author = u'Luca Martinelli'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -58,7 +58,7 @@ author = u'Luca Martinelli'
 # built documents.
 #
 # The short X.Y version.
-version = u'0.5'
+version = u'0.6'
 # The full version, including alpha/beta/rc tags.
 release = u'0.1'
 
@@ -196,11 +196,11 @@ html_static_path = ['static']
 
 # If true, links to the reST sources are added to the pages.
 #
-# html_show_sourcelink = True
+html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #
-# html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #
@@ -234,7 +234,7 @@ html_static_path = ['static']
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'EAGLEDOCdoc'
+htmlhelp_basename = 'EAGLEDOC'
 
 # -- Options for LaTeX output ---------------------------------------------
 
