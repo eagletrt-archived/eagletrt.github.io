@@ -8,7 +8,7 @@
 Welcome to EAGLEDOC's documentation!
 ====================================
 
-Questa è la raccolta delle documentazioni usate dall' `Eagle Trento Racing Team`
+Questa è la raccolta delle documentazioni usate dall' **Eagle Trento Racing Team**
 
 
 Contents:
