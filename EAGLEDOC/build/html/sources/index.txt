@@ -10,11 +10,12 @@ Welcome to EAGLEDOC's documentation!
 
 Questa è la raccolta delle documentazioni usate dall' **Eagle Trento Racing Team**
 
+Link al nostro sito: http://e-agletrentoracingteam.it/
 
 Contents:
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 2
 
    design
 

@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="EAGLEDOC 0.2 documentation" href="index.html"/> 
+    <link rel="top" title="EAGLEDOC 0.2 documentation" href="index.html"/>
+        <link rel="up" title="Design Presentation" href="design.html"/>
+        <link rel="next" title="Wiring of Chimera Evoluzione" href="wiring.html"/>
+        <link rel="prev" title="Design Presentation" href="design.html"/> 
 
   
   <script src="static/js/modernizr.min.js"></script>
@@ -79,8 +82,26 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="design.html">Design Presentation</a></li>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="design.html">Design Presentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Steering Wheel of Chimera Evoluzione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prototype">Prototype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#errors-tab">Errors Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#warnings-tab">Warnings Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#status-tab">Status Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#racing-page">Racing Page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#battery-tab">Battery Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sensors-tab">Sensors Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wiring.html">Wiring of Chimera Evoluzione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensors.html">Sensors of Chimera Evoluzione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="accumulator.html">Accumulator of Chimera Evoluzione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lowvoltage.html">Low Volatge of Chimera Evoluzione</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="volante.html">Volante</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webplatform.html">Web Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bms.html">BMS</a></li>
@@ -117,6 +138,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
+          <li><a href="design.html">Design Presentation</a> &raquo;</li>
+      
     <li>Steering Wheel of Chimera Evoluzione</li>
       <li class="wy-breadcrumbs-aside">
         
@@ -129,15 +152,80 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="steering-wheel-of-chimera-evoluzione">
+  <img alt="images/wallpaper.png" src="images/wallpaper.png" />
+<div class="section" id="steering-wheel-of-chimera-evoluzione">
 <h1>Steering Wheel of Chimera Evoluzione<a class="headerlink" href="#steering-wheel-of-chimera-evoluzione" title="Permalink to this headline">¶</a></h1>
-<p>Here you can find everything we want to share with you and the judges, just kidding, learn if you want!</p>
+<img alt="images/imagemockup.jpg" src="images/imagemockup.jpg" />
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>When we designed our steering wheel, we mainly thought about what the driver needs during the race. According to our necessity, we used an <strong>Agile</strong> approach: the &#8220;client&#8221;, our driver, has an active role in the software development and also in the design of the Steering Wheel.</p>
+</div>
+<div class="section" id="prototype">
+<h2>Prototype<a class="headerlink" href="#prototype" title="Permalink to this headline">¶</a></h2>
+<p>We started from a blank page, drawing with a pen the interface as a <strong>low fidelity prototype</strong>: here, the whole development team worked together attentively considering what the driver had to say. The next phase involved the high fidelity prototype: our designer concretized our idea through <strong>Illustrator</strong> which made things easier, mostly as we had the possibility to export the assets on <strong>Photoshop</strong>. In this way, the objects were easily manageable and ready-to-use in our <strong>UI</strong>, codes with
+<strong>C++</strong>.</p>
+<p>The Framework used is <strong>Qt 5.10.1</strong>, being it the most used in Automotive industriess.
+The result of our work is an eandearing interface composed of 6 tabs.</p>
+<p>The thing that makes our Steering Wheel so unique is the assets, which are designed by us and inspired to the racing world — in particular to the racing game.
+We choose to use <strong>Raspberry Pi</strong> as target board, it makes things easier when we had trouble during the development, the RPI has it own Shield design by us to extend the GPIO and integrate CAN-BUS to comunicate with the others boards of the vehicle. Also regarding the case and the front panel they were design and produce by us bla bla bla, the manettini sono stampati in modo figo perchè stampiamo in 3d e abbiamo la robbba più bbbona</p>
+<img alt="images/imageshield.png" src="images/imageshield.png" />
+<p>One of the most important choices to have the best <strong>HMI</strong> possible was to display the state of charge of the <strong>HV</strong> and <strong>LV</strong> and the state of the vehicle (<strong>IDLE</strong>, <strong>SETUP</strong>, <strong>RUN</strong> and <strong>STOP</strong>) from each tab as a frame, considering the UI it&#8217;s the most apparent change. This choice was very important during the development, because it determined the order of our work starting from the frame and going on only after with the tabs.</p>
+</div>
+<div class="section" id="errors-tab">
+<h2>Errors Tab<a class="headerlink" href="#errors-tab" title="Permalink to this headline">¶</a></h2>
+<img alt="images/imagetab1.png" src="images/imagetab1.png" />
+<p>The first one is called &#8220;Errors Tab&#8221;: through this, we can see if there are any critical errors on the car; if there is none, we can start the car and, later, we can stop it. These actions activate or deactivate the tractive system, so the starting procedure must be done every time before turning on the engine. The usefulness is in the fact that if there are errors and the driver doesn&#8217;t notice, the car won&#8217;t start.</p>
+</div>
+<div class="section" id="warnings-tab">
+<h2>Warnings Tab<a class="headerlink" href="#warnings-tab" title="Permalink to this headline">¶</a></h2>
+<img alt="images/imagetab2.png" src="images/imagetab2.png" />
+<p>The second one is called &#8220;Warnings Tab&#8221;, to see if there is any warning on the car. Unlike errors, warnings are not system critical and are there only to inform the driver if a certain sensor is not working properly. If there is a warning, the car can still turn on and if during the race a warning appears, the car will stay on. These values are updated every 500ms.</p>
+</div>
+<div class="section" id="status-tab">
+<h2>Status Tab<a class="headerlink" href="#status-tab" title="Permalink to this headline">¶</a></h2>
+<img alt="images/imagetab3.png" src="images/imagetab3.png" />
+<p>In the third tab we can see the status of the precharge, as well as the status of the inverters. We can also decide to turn an inverter on or off. This procedure must be done before going in ready-to-drive mode: if the inverters are off or cannot be started (which they are by default), the ready-to-drive mode won&#8217;t be enabled.</p>
+</div>
+<div class="section" id="racing-page">
+<h2>Racing Page<a class="headerlink" href="#racing-page" title="Permalink to this headline">¶</a></h2>
+<img alt="images/imagetab4.png" src="images/imagetab4.png" />
+<p>The fourth tab, also called &#8220;Racing Page&#8221;, is the most important one. From here, the driver can go in ready-to-drive mode by clicking the button in the top left corner. In the middle of the screen, the driver sees how many KW of power he&#8217;s requesting to the motors, while on the bottom he can see the motor map he is in. Motor maps are used to limit the power available, with map 1 being -20% (which means reverse), map 2 being 20%, map 3 being 40% and so on until 100%. The map can be
+changed before going in ready-to-drive.
+In this page the driver can also see the temperatures of the HV and LV batteries, as well as their voltage. This data is shown respectively in the bottom left and right of the screen. In the central part of the screen there are two more indicators, which show how much throttle and brake is applied at any given moment. At the top of the tab there is also an indicator which shows wether the control is on, if there is an error and if there is a warning. These indicators update every
+500ms, just like in the other tabs.</p>
+</div>
+<div class="section" id="battery-tab">
+<h2>Battery Tab<a class="headerlink" href="#battery-tab" title="Permalink to this headline">¶</a></h2>
+<img alt="images/imagetab5.png" src="images/imagetab5.png" />
+<p>The sixth tab, also called &#8220;Battery Tab&#8221;, shows the status of the batteries: here is possible to see the minimum, average and maximum of temperature and voltage of HV and LV</p>
+</div>
+<div class="section" id="sensors-tab">
+<h2>Sensors Tab<a class="headerlink" href="#sensors-tab" title="Permalink to this headline">¶</a></h2>
+<img alt="images/imagetab6.png" src="images/imagetab6.png" />
+<p>The fifth tab is essentially sensors (APPS, BSE and STEER). Here, we can setup them with an interactive procedure staring from the MIN and ending with the MAX.
+It&#8217;s very important to us in order to remove the use of an external device for this procedure.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>We consider our work not an ended project, on the contrary is a good point to start for the next year.
+The solution that we developed allowed us to learn better QT, and find some issues to solve and improve as the time needed to the RPI to start.
+Considering the board, we want to move our code something less amateur like an STM32.</p>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="wiring.html" class="btn btn-neutral float-right" title="Wiring of Chimera Evoluzione" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="design.html" class="btn btn-neutral" title="Design Presentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
