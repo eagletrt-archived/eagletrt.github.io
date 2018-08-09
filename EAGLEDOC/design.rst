@@ -10,12 +10,40 @@ Contents:
 .. toctree::
    :maxdepth: 6
 
-   eaglesteeringwheel
+   designCooling
 
-   wiring
+   designSuspensions
 
-   sensors
+   designTelemetry
 
-   accumulator
+   designEco
 
-   lowvoltage
+   designAerodynamics
+
+   designPowertrain
+
+   designAccumulator
+
+   designLV
+
+   designChassis
+
+   designControl
+
+   designVehicalDynamics
+
+Cooling
+Suspensions
+Steering Wheel and Telemetry
+Organization, budgeting and ASD Administration
+Aerodynamics
+Powertrain
+Accumulator and HV Systems
+LV System
+Chassis
+Control
+Vehical Dynamics and Control
+
+eliminare ciò che non è mai servito
+aggiungere guida accensione
+QR BIBBI

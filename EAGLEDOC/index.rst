@@ -23,11 +23,7 @@ Contents:
 
    webplatform
 
-   bms
-
    sensori
-
-   muretto
 
    help
 
