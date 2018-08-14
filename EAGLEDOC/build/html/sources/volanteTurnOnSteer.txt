@@ -1,7 +1,7 @@
 .. image:: /images/wallpaper.png
 
 Eagle Steering Wheel
-=============================
+====================
 
 Accensione Chimera Evoluzione
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

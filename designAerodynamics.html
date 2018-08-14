@@ -87,7 +87,14 @@
 <li class="toctree-l2"><a class="reference internal" href="designCooling.html">Cooling of Chimera Evoluzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="designTelemetry.html">Steering Wheel and Telemetry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="designEco.html">Organization, budgeting and ASD Administration for Chimera Evoluzione</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Aerodynamics of Chimera Evoluzione</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Aerodynamics of Chimera Evoluzione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#design">Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#structural-efficiency">Structural efficiency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manufacturing-of-the-wing-shell">Manufacturing of the wing shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#future-developments">Future Developments</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="designPowertrain.html">Powertrain of Chimera Evoluzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="designAccumulator.html">Accumulator of Chimera Evoluzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="designLV.html">LV System of Chimera Evoluzione</a></li>
@@ -144,9 +151,202 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="aerodynamics-of-chimera-evoluzione">
+  <img alt="images/wallpaper.png" src="images/wallpaper.png" />
+<div class="section" id="aerodynamics-of-chimera-evoluzione">
 <h1>Aerodynamics of Chimera Evoluzione<a class="headerlink" href="#aerodynamics-of-chimera-evoluzione" title="Permalink to this headline">¶</a></h1>
-<p>Here you can find everything we want to share with you and the judges, just kidding, learn if you want!</p>
+<img alt="images/design.png" src="images/design.png" />
+<div class="section" id="design">
+<h2>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h2>
+<p><strong>The Concept</strong></p>
+<p>This is the first time in our history that we perform a complete aerodynamics study to improve our
+car’s performances. Because of the low speed and high accelerations of our car, we decided to focus
+our aerodynamics on creating downforce. Having no experience in aerodynamics devices
+manufacturing, our goal was to design and produce an efficient wing out of carbon fiber composites.
+Doing so we can directly experiment the design and manufacturing techniques related to the
+carbon-fiber composites in aero-devices.
+From the literature we got some common lift and drag values, and after some simulations we found
+out that adding downforce to the rear axle compensates to the natural over-steering behavior of our
+car.
+We adopted an unsprung solution for the wing to bring downforce directly to the upright, without passing
+through the suspension mechanism, this allows us to keep the car at the lowest possible setup, without
+worrying about the additional load coming from the wing. We decided to experiment this kind of solution
+also to make easier a future development of an undertray, thanks to the more predictable height and
+pitch of the vehicle.</p>
+<img alt="images/designAero1.png" src="images/designAero1.png" />
+<p><strong>The [s1223] Airfoil</strong></p>
+<p>The airfoil has been chosen from the airfoiltools.com online database, it is the [s1223], which is a
+High-lift cambered airfoil, and performs well at low speed in terms of Cl/Cd. The airfoil
+performances have been validated in the Ansys Fluent 2D environment.</p>
+<img alt="images/designAero2.jpg" src="images/designAero2.jpg" />
+<p>Selig S1223 high lift low Reynolds number airfoil
+Max thickness 12.1% at 19.8% chord.
+Max camber 8.1% at 49% chord</p>
+<p>Reynolds number has been estimated to be enclosed between 500.000 and 1.000.000, with the
+speed ranging from 40km/h to 90km/h, for a 600mm wing cord.</p>
+<p>From the airfoiltools.com, the [s1223] online datasheet:</p>
+<p>Violet -&gt; Re = 500.000
+Yellow -&gt; Re = 1.000.000</p>
+<img alt="images/designAero3.jpg" src="images/designAero3.jpg" />
+<img alt="images/designAero4.jpg" src="images/designAero4.jpg" />
+<img alt="images/designAero5.jpg" src="images/designAero5.jpg" />
+<img alt="images/designAero6.jpg" src="images/designAero6.jpg" />
+<p>Due to the experimental purposes of this wing, we made it adjustable on three different angles of
+attack. It is not an active wing, the setup must be changed manually before the run, by operating on
+six screws.</p>
+<p>The three angles have been chosen while keeping high Cl/Cd.</p>
+<p>α1 = 12°,
+α2 = 7°,
+α3 = 2°</p>
+<p>In our simulations we used the most critical configuration, at α = 12°, at the most common
+cornering speed 17m/s (≈60km/h).</p>
+<img alt="images/designAero7.jpg" src="images/designAero7.jpg" />
+<img alt="images/designAero8.png" src="images/designAero8.png" />
+<img alt="images/designAero9.png" src="images/designAero9.png" />
+<img alt="images/designAero10.jpg" src="images/designAero10.jpg" />
+<img alt="images/designAero11.jpg" src="images/designAero11.jpg" />
+<p>The simulated coefficients are slightly worse than the ones that we expected from the datasheet. In
+the stream-line plot we can notice a partial flow detachment at the very tip of the wing, which may
+be the cause of our Cl drop and Cd rise.
+It’s unclear if the flow detachment is supposed to exist, or if it is the result of an approximation.
+Anyway, we headed up with the design of the wing.</p>
+<p><strong>Going 3D</strong></p>
+<img alt="images/designAero12.jpg" src="images/designAero12.jpg" />
+<p>After the 2D validation, the shape of thw wing has been designed to concentrate the highest angle of attack on the sides (where the airflow is undisturbed by the main-hoop&#8217;s turbulence) reducing by 3° in the middle. At the
+same time the wing chord increases toward the middle of the wing, in order to increase the flexural resistance, and keep high the lift on the full span.</p>
+<img alt="images/designAero13.jpg" src="images/designAero13.jpg" />
+<p>After the 3D shaping of the wing, 3D CFD simulations have been done in order to validate the final
+geometry.
+For calculus simplicity, the wing is suspended in air neglecting of the turbulence of the car in front of
+it. The two rod-joints on the top have been suppressed too.</p>
+<img alt="images/designAero14.png" src="images/designAero14.png" />
+<img alt="images/designAero15.png" src="images/designAero15.png" />
+<img alt="images/designAero16.png" src="images/designAero16.png" />
+<img alt="images/designAero17.png" src="images/designAero17.png" />
+<img alt="images/designAero18.jpg" src="images/designAero18.jpg" />
+<p>This performance drop might depend on two factors: the first is that the coarseness of the mesh does not allow to properly model the boundary layer, the second is related to the wing geometry.
+If we look at the stream-line graphics we clearly see two counter rotating vortices.</p>
+<img alt="images/designAero19.jpg" src="images/designAero19.jpg" />
+<img alt="images/designAero20.jpg" src="images/designAero20.jpg" />
+<p>These two vortices dissipate energy (increasing Cd), and simultaneously decrease the effective wing
+span (dropping Cl).</p>
+</div>
+<div class="section" id="dynamics">
+<h2>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this headline">¶</a></h2>
+<p>Once the wing aerodynamics properties were validated, we used the calculated coefficients in our
+optimal control simulations. We performed the test on a generic autocross circuit with and without
+the presence of the wing. We obtained a nice improvement on the fast corners, allowing us to go
+even faster and having higher lateral accelerations.</p>
+<img alt="images/designAero21.jpg" src="images/designAero21.jpg" />
+<p>We have an improvement on the lap time of -1,4457s, which corresponds to a 3,08% faster lap in
+optimal conditions.</p>
+<img alt="images/designAero22.jpg" src="images/designAero22.jpg" />
+<img alt="images/designAero23.jpg" src="images/designAero23.jpg" />
+<img alt="images/designAero25.jpg" src="images/designAero25.jpg" />
+<p>We can also confirm that the wing compensates to the natural oversteering behavior of our car,
+which become almost neutral in the range between 65 and 80km/h. Over 90km/h the behavior is
+definitely under-steering. Our plan for the future is to add a front wing to compensate this problem.</p>
+<img alt="images/designAero26.jpg" src="images/designAero26.jpg" />
+</div>
+<div class="section" id="structural-efficiency">
+<h2>Structural efficiency<a class="headerlink" href="#structural-efficiency" title="Permalink to this headline">¶</a></h2>
+<p>Once the dynamics were validated, it was time to check the structural efficiency of the whole aero
+device.</p>
+<p><strong>The Wing shell</strong></p>
+<p>The most critical part of the wing structure is the wing shell, it must guarantee a maximum
+deflection lower than 10mm, with 200N applied vertically.
+Since we don’t have precise data about this carbon fiber layout, in our simulation we used a single
+0,5mm thick carbon-epoxy layer. After the simulation, to ensure the rigidity, we over-dimensioned
+the layout as follows (at the price of the weight):</p>
+<p>The wing is then glued to two lateral Al 6082 blades, which are used to screw the wing to the
+endplates.</p>
+<p>The loading configuration has been exported from the 100km/h CFD simulation as a pressure
+distribution.</p>
+<img alt="images/designAero27.jpg" src="images/designAero27.jpg" />
+<p>Just to have an idea of the loads, we calculated them by fixing the wing by the six mounting holes,
+and calculating the reaction forces.</p>
+<p>The drag contributes (X Axis) is negligible respect to the lift (Y Axis); because of that for the
+structural analysis we modeled the wing as simply fixed by the 6 mounting holes, neglecting of the
+two streamlined anchors on the top.
+The two Al 6082 side-plates are kept in place to evenly distribute the pressure from the carbon to
+the mounting holes.</p>
+<img alt="images/designAero28.jpg" src="images/designAero28.jpg" />
+<p>The maximum equivalent stress is reached in proximity of the mounting holes, on the aluminum
+side-plates; 89MPa is ok for the Al 6082. On the carbon shell we see that 20MPa peaks are
+reached, which is ok.</p>
+<img alt="images/designAero29.jpg" src="images/designAero29.jpg" />
+<img alt="images/designAero30.jpg" src="images/designAero30.jpg" />
+<p>The maximum displacement is about 7mm, with about 400N of load. Which is already ok for the
+FSG2018 rules. By over dimensioning the carbon fiber layout we are sure that the rigidity
+requirements are met.</p>
+<img alt="images/designAero31.jpg" src="images/designAero31.jpg" />
+<p><strong>Upright attachment</strong></p>
+<p>The upright attachment is made out of 3 Al 6082 sheets, pressed together by 5 screws around the
+wing supports.</p>
+<img alt="images/designAero32.jpg" src="images/designAero32.jpg" />
+<p>Over the aerodynamics downforce, this part must withstand the inertial loads caused by the wing
+structure above it, and road asperity accelerations. Assuming a mass of about 2,5kg for the wing
+structure supported by the upright attachment, and a vertical acceleration of about 40G coming
+from the tire hitting a curb at 100km/h, we get about 1000N from inertia, plus half of the 400N
+from the aero downforce at 100km/h.
+Our load is then 1000+200 = 1200N, which is evenly distributed on the 3 upper screws.
+For model simplicity, we assumed the force coming from the road, and the part is fixed by the 3
+screw holes.</p>
+<img alt="images/designAero33.jpg" src="images/designAero33.jpg" />
+<p>The force is transmitted to the two lateral plates by two steel pins.</p>
+<img alt="images/designAero34.jpg" src="images/designAero34.jpg" />
+<img alt="images/designAero35.jpg" src="images/designAero35.jpg" />
+<p>As expectable, the maximum stress is located in proximity of the lower attachment hole, anyway it is
+limited to 52MPa.
+This part has been designed to guarantee a high stiffness, and distribute the tension on the carbon
+fiber support, in order to avoid stress concentrations.</p>
+<img alt="images/designAero36.jpg" src="images/designAero36.jpg" />
+<p><strong>Wing Supports</strong></p>
+<p>As for the wing shell, we still made conservative assumptions for this part, and over dimensioned
+the carbon layout. In our simulation we still used a single carbon-epoxy layer, instead of the 6 used
+on the real part, and a 9mm thick foam core.</p>
+<p>The wing’s support has been tested with a load of 1000N, assuming 800N of inertial forces while
+hitting a curb, plus 200N from aero downforce</p>
+<img alt="images/designAero37.jpg" src="images/designAero37.jpg" />
+<img alt="images/designAerodynamics/designAero38.jpg" src="images/designAerodynamics/designAero38.jpg" />
+<img alt="images/designAero39.png" src="images/designAero39.png" />
+<p>Such a refined mesh was needed to properly model the contact surface between the carbon layer and
+the core.</p>
+<img alt="images/designAero40.png" src="images/designAero40.png" />
+<p>The displacement is ok, simply negligible for our purposes.</p>
+</div>
+<div class="section" id="manufacturing-of-the-wing-shell">
+<h2>Manufacturing of the wing shell<a class="headerlink" href="#manufacturing-of-the-wing-shell" title="Permalink to this headline">¶</a></h2>
+<p>The mold for the wing shell has been obtained from a hydrophobic MFD (Medium density fiber)
+block. This choice has been governed by the extremely low cost of the material (600€/m 3 ) compared
+to the Ureol (8000€/m 3 ). Turned out that we got some troubles due to the moisture absorbed in the
+wood, that developed some bubbles while in the autoclave. We also got some problems since the
+wood does not conduce heat very well, and we needed to keep the mold in the autoclave for a
+longer period of six hours, instead of 4 hours, to ensure a complete cure of the resin.</p>
+<img alt="_images/" src="_images/" />
+<img alt="_images/" src="_images/" />
+</div>
+<div class="section" id="future-developments">
+<h2>Future Developments<a class="headerlink" href="#future-developments" title="Permalink to this headline">¶</a></h2>
+<p>For our next step we plan to invest more energies into the aerodynamics studies, since we think to have a
+large margin to improve our car performances using aerodynamics.</p>
+<p><strong>We have 3 main goals:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Development of a fully adjustable aerodynamic pack, complete of undertray, front, and rear wing.</li>
+<li>Overall car characterization and drag reduction.</li>
+<li>Improvement of the carbon fiber manufacturing techniques.</li>
+</ul>
+</div></blockquote>
+<p><strong>Development of a full aerodynamic pack</strong></p>
+<p>We aim to the development of a fully adjustable aero pack. This to increase our knowledge of the overall
+vehicle behavior, and correction of the actual understeering at high speeds.</p>
+<p>Our plan is to have a large use of 3D printed aerodynamics appendix instead of carbon fiber ones.
+Additive manufacturing allows us to have extremely complex shapes, at relatively low costs if compared to
+the carbon fiber laminated ones.</p>
+<p><strong>Car drag reduction</strong></p>
+<p>We performed a rough analysis of the car behavior in the free stream using Autodesk Flow Design ©. What
+emerged is that the main drag sources in our car are the front wheels, and the very high main hoop.</p>
+</div>
 </div>
 
 
