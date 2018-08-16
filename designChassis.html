@@ -91,7 +91,43 @@
 <li class="toctree-l2"><a class="reference internal" href="designPowertrain.html">Powertrain of Chimera Evoluzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="designAccumulator.html">Accumulator of Chimera Evoluzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="designLV.html">LV System of Chimera Evoluzione</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Chassis of Chimera Evoluzione</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Chassis of Chimera Evoluzione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#engineering-specification">Engineering Specification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chassis-design-workflow">Chassis Design Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design-exploration">Design Exploration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#input-parameters">Input parameters:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output-parameters">Output parameters:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#parameters-correlation">Parameters Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optimization-results">Optimization Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design-for-performance">Design for Performance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fea-models">FEA Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#final-design-results">Final Design Results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-evaluation">Performance Evaluation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#torsion-analysis">Torsion analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modal-analysis">Modal analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transient-analysis-on-circuit">Transient Analysis on Circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loads-on-tires">Loads on Tires</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stress-analysis">Stress analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chassis-torsion">Chassis Torsion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#results-validation-model">Results Validation Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#additive-manufacturing-integration">Additive Manufacturing Integration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-idea-of-3d-printed-joints">The idea of 3D printed joints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fea-validation">FEA Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nodes-reaction-forces-expressed-in-newtons">NODES REACTION FORCES (EXPRESSED IN NEWTONS)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="designControl.html">Control of Chimera Evoluzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="designVehicalDynamics.html">Vehical Dynamics and Control of Chimera Evoluzione</a></li>
 </ul>
@@ -144,9 +180,370 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="chassis-of-chimera-evoluzione">
+  <img alt="images/wallpaper.png" src="images/wallpaper.png" />
+<div class="section" id="chassis-of-chimera-evoluzione">
 <h1>Chassis of Chimera Evoluzione<a class="headerlink" href="#chassis-of-chimera-evoluzione" title="Permalink to this headline">¶</a></h1>
-<p>Here you can find everything we want to share with you and the judges, just kidding, learn if you want!</p>
+<img alt="images/design.png" src="images/design.png" />
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<div class="section" id="engineering-specification">
+<h2>Engineering Specification<a class="headerlink" href="#engineering-specification" title="Permalink to this headline">¶</a></h2>
+<p>QFD diagram to understand parameters needed for an initial design, based on adversary teams.</p>
+<img alt="images/designChassis1.png" src="images/designChassis1.png" />
+</div>
+<div class="section" id="chassis-design-workflow">
+<h2>Chassis Design Workflow<a class="headerlink" href="#chassis-design-workflow" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>3 different layout candidates were taken into FEM analysis to define a starting point. The one with better
+torsional stiffness compared to the mass has been chosen as the basis for the following optimization
+process.
+Configuration 3 has been selected and taken into successive development.</p>
+<div class="figure align-center" id="id1">
+<img alt="images/designChassis2.png" src="images/designChassis2.png" />
+<p class="caption"><span class="caption-text"><em>Configuration 1: Ks_torsion = 50.35 [Nm/° Kg]</em></span></p>
+</div>
+<div class="figure align-center" id="id2">
+<img alt="images/designChassis3.png" src="images/designChassis3.png" />
+<p class="caption"><span class="caption-text"><em>Configuration 2: Ks_torsion = 69.29 [Nm/° Kg]</em></span></p>
+</div>
+<div class="figure align-center" id="id3">
+<img alt="images/designChassis4.png" src="images/designChassis4.png" />
+<p class="caption"><span class="caption-text"><em>Configuration 3: Ks_torsion = 99.31 [Nm/° Kg]</em></span></p>
+</div>
+</div>
+<div class="section" id="design-exploration">
+<h2>Design Exploration<a class="headerlink" href="#design-exploration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="input-parameters">
+<h3>Input parameters:<a class="headerlink" href="#input-parameters" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Structure geometry variables:
+- angles on side view
+- lengths on side view
+- widths on top view</li>
+<li>Tubes cross section variables:
+- Section Moment of Inertia
+- Area cross Section</li>
+</ul>
+</div></blockquote>
+<img alt="images/designChassis5.png" src="images/designChassis5.png" />
+<img alt="images/designChassis6.png" src="images/designChassis6.png" />
+</div>
+<div class="section" id="output-parameters">
+<h3>Output parameters:<a class="headerlink" href="#output-parameters" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">Torsional stiffness: main parameter for chassis design, crucial for vehicle performance.</p>
+<img alt="images/designChassis/designChassis7a.png" src="images/designChassis/designChassis7a.png" />
+</li>
+<li><p class="first">Bending stiffness: chassis under load with a force directed downward in the driver cockpit area.</p>
+<img alt="images/designChassis/designChassis7b.png" src="images/designChassis/designChassis7b.png" />
+</li>
+<li><p class="first">Braking stiffness: a rigid link simulates the contact point of the wheel on the ground. A force is applied on the center of gravity to simulate the braking phase.</p>
+<img alt="images/designChassis/designChassis7c.png" src="images/designChassis/designChassis7c.png" />
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="parameters-correlation">
+<h2>Parameters Correlation<a class="headerlink" href="#parameters-correlation" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Parameters correlation study allows to:</strong></dt>
+<dd><ul class="first last simple">
+<li>Determine which parameters have higher influence on the design</li>
+<li>Find relationship grade between different parameters</li>
+</ul>
+</dd>
+<dt><strong>Rank order clustering algorithms:</strong></dt>
+<dd><ul class="first simple">
+<li>Assign the binary weights with its help determination of the weight in decimal for each row and column</li>
+<li>Rearrange the rows in the order of descending</li>
+<li>Repeat steps 1 and 2 for every column. And the reiterate from step</li>
+<li>The procedure has to be repeated till there reaches a point that the elements cannot be further changed from their positions.</li>
+</ul>
+<img alt="images/designChassis7.png" class="last" src="images/designChassis7.png" />
+</dd>
+</dl>
+<p><strong>3 macro families found and taken into further development process:</strong></p>
+<div class="figure align-center" id="id4">
+<img alt="images/designChassis8.png" src="images/designChassis8.png" />
+<p class="caption"><span class="caption-text"><strong>First Group:</strong></span></p>
+<div class="legend">
+<p>Variables: 7 (position)</p>
+<p>Target: maximize Ks_bend and Ks_break</p>
+<p>Main constraints: mass =&lt; 30 Kg</p>
+<p>Optimization method: MOGA (Multi-Objective Genetic Algorithm)</p>
+</div>
+</div>
+<div class="figure align-center" id="id5">
+<img alt="images/designChassis9.png" src="images/designChassis9.png" />
+<p class="caption"><span class="caption-text"><strong>Second Group:</strong></span></p>
+<div class="legend">
+<p>Variables: 13 (lengths and angles)</p>
+<p>Target: maximize Ks_torsion &gt; 2000</p>
+<p>Main constraints: mass =&lt; 30 Kg</p>
+<p>Optimization method: NLPQL (Nonlinear Programming by Quadratic Lagrangian)</p>
+</div>
+</div>
+<div class="figure align-center" id="id6">
+<img alt="images/designChassis10.png" src="images/designChassis10.png" />
+<p class="caption"><span class="caption-text"><strong>Third Group:</strong></span></p>
+<div class="legend">
+<p>Variables: 17 (moment of inertia and tubes cross sectional area)</p>
+<p>Target: maximize Ks_torsion &gt; 2000</p>
+<p>Main constraints: mass =&lt; 30 Kg</p>
+<p>Diameters and thickness from rules Optimization method: NLPQL (Nonlinear Programming by Quadratic Lagrangian)</p>
+</div>
+</div>
+</div>
+<div class="section" id="optimization-results">
+<h2>Optimization Results<a class="headerlink" href="#optimization-results" title="Permalink to this headline">¶</a></h2>
+<p>The black chassis represent the first design layout, before optimization.
+The yellow chassis is the result after optimization</p>
+<div class="figure">
+<img alt="images/designChassis11.png" src="images/designChassis11.png" />
+</div>
+</div>
+<div class="section" id="design-for-performance">
+<h2>Design for Performance<a class="headerlink" href="#design-for-performance" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fea-models">
+<h3>FEA Models<a class="headerlink" href="#fea-models" title="Permalink to this headline">¶</a></h3>
+<p><strong>Torsion</strong></p>
+<div class="figure">
+<img alt="images/designChassis12.png" src="images/designChassis12.png" />
+</div>
+<p><strong>Accelleration</strong></p>
+<div class="figure">
+<img alt="images/designChassis13.png" src="images/designChassis13.png" />
+</div>
+<p><strong>Bending</strong></p>
+<div class="figure">
+<img alt="images/designChassis14.png" src="images/designChassis14.png" />
+</div>
+</div>
+<div class="section" id="final-design-results">
+<h3>Final Design Results<a class="headerlink" href="#final-design-results" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="images/designChassis15.png" src="images/designChassis15.png" />
+</div>
+</div>
+</div>
+<div class="section" id="performance-evaluation">
+<h2>Performance Evaluation<a class="headerlink" href="#performance-evaluation" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Torsion Analysis</li>
+<li>Modal Analysis</li>
+<li>Transient Analysis on circuit</li>
+</ul>
+</div></blockquote>
+<div class="section" id="torsion-analysis">
+<h3>Torsion analysis<a class="headerlink" href="#torsion-analysis" title="Permalink to this headline">¶</a></h3>
+<p>k_torsion = 2054 Nm/° with rigid wishbones</p>
+<div class="figure align-center">
+<img alt="images/designChassis16.png" src="images/designChassis16.png" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis17.png" src="images/designChassis17.png" />
+</div>
+</div>
+<div class="section" id="modal-analysis">
+<h3>Modal analysis<a class="headerlink" href="#modal-analysis" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis18.png" src="images/designChassis18.png" />
+</div>
+</div>
+<div class="section" id="transient-analysis-on-circuit">
+<h3>Transient Analysis on Circuit<a class="headerlink" href="#transient-analysis-on-circuit" title="Permalink to this headline">¶</a></h3>
+<p>The trajectory plotted below is calculated to avoid the wheel slip with the highest possible speed. To find
+the ideal path and the corresponding accelerations, a Matlab code has been developed. The data relating
+to the accelerations and therefore the forces acting on the structure were transferred into the Ansys APDL
+car model.</p>
+<div class="figure align-center">
+<img alt="images/designChassis19.png" src="images/designChassis19.png" />
+</div>
+<ul class="simple">
+<li><strong>Colors:</strong><ul>
+<li>Track Limits: Green</li>
+<li>Tire Trajectory: Red</li>
+<li>Car Centreline: Blue</li>
+</ul>
+</li>
+</ul>
+<div class="figure">
+<img alt="images/designChassis20.png" src="images/designChassis20.png" />
+</div>
+<div class="figure">
+<img alt="images/designChassis21.png" src="images/designChassis21.png" />
+</div>
+<div class="figure">
+<img alt="images/designChassis22.png" src="images/designChassis22.png" />
+</div>
+<div class="figure">
+<img alt="images/designChassis23.png" src="images/designChassis23.png" />
+</div>
+</div>
+<div class="section" id="loads-on-tires">
+<h3>Loads on Tires<a class="headerlink" href="#loads-on-tires" title="Permalink to this headline">¶</a></h3>
+<p>To understand how the total structure is stressed the load history must be known. The starting point are the
+reaction forces that the car receives from the ground through the wheels.
+The plot below represents the tires reaction forces during the skid pad test. The weight car force was
+considered in the dynamic load transfer.
+Vertical loads results:</p>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<p>Grip limit values found during the tire analysis model:</p>
+<blockquote>
+<div><ul class="simple">
+<li>1700 [N] for the front wheels</li>
+<li>3800 [N] for the rear wheels.</li>
+</ul>
+</div></blockquote>
+<p>Observing the lateral loads results can be seen that the rear wheels in the points of higher acceleration slip.
+In fact, the springs that simulate the wheels give a reaction force higher than the real grip condition. This can
+lead to have a peaks load on the structure higher to the actual ones.</p>
+</div>
+<div class="section" id="stress-analysis">
+<h3>Stress analysis<a class="headerlink" href="#stress-analysis" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<p>The stresses peaks occur during trajectory change. This happens when the machine moves from one circle to
+the other during the skid pad test.</p>
+</div>
+<div class="section" id="chassis-torsion">
+<h3>Chassis Torsion<a class="headerlink" href="#chassis-torsion" title="Permalink to this headline">¶</a></h3>
+<p>To find the chassis torsion in Ansys, has been calculated the difference between the front and rear rotation
+of the axes with respect to the roll center.</p>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<p>As can be seen from the chart above, the chassis behaves like a torsional spring due to the weight distribution
+difference. The advantage of having such small deformations is that at each elastic return of the chassis in
+the curve exit, there are less oscillations, resulting in a better drivability</p>
+</div>
+<div class="section" id="results-validation-model">
+<h3>Results Validation Model<a class="headerlink" href="#results-validation-model" title="Permalink to this headline">¶</a></h3>
+<p>Final results from the two software are plotted below:</p>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis25.png" src="images/designChassis25.png" />
+</div>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+</div>
+</div>
+<div class="section" id="additive-manufacturing-integration">
+<h2>Additive Manufacturing Integration<a class="headerlink" href="#additive-manufacturing-integration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-idea-of-3d-printed-joints">
+<h3>The idea of 3D printed joints<a class="headerlink" href="#the-idea-of-3d-printed-joints" title="Permalink to this headline">¶</a></h3>
+<p>Once the X, Y, Z coordinates of the kinematic points have been defined, is mandatory to maintain the
+maximum precision after the welding. Adding the brackets “by hand” using a complex support structure is
+expensive, less precise and incline to misalignments and errors.</p>
+<p>The possibility given by additive manufacturing allows to overcome many of those problems. The final
+version of the joints has unique features:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Integrated suspension brackets</li>
+<li>Topology optimized with internal ribs and variable thickness</li>
+<li>Nesting guides for precise assembly, torque transmission, easier welding process</li>
+<li>Allowing better electrical grounding across the entire structure</li>
+<li>Head-to-head welding with tubes due to 4 spacers for each terminal</li>
+</ul>
+</div></blockquote>
+<p>Design process illustration:</p>
+<div class="figure align-center">
+<img alt="images/designChassis26.png" src="images/designChassis26.png" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis27.png" src="images/designChassis27.png" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis29.png" src="images/designChassis29.png" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis29.png" src="images/designChassis29.png" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis30.png" src="images/designChassis30.png" />
+</div>
+</div>
+<div class="section" id="fea-validation">
+<h3>FEA Validation<a class="headerlink" href="#fea-validation" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="images/designChassis31.png" src="images/designChassis31.png" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis32.png" src="images/designChassis32.png" />
+</div>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis34.png" src="images/designChassis34.png" />
+</div>
+</div>
+</div>
+<div class="section" id="nodes-reaction-forces-expressed-in-newtons">
+<h2>NODES REACTION FORCES (EXPRESSED IN NEWTONS)<a class="headerlink" href="#nodes-reaction-forces-expressed-in-newtons" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<div class="section" id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<p>In the first and the second plot the lines are essentially overlapped. This proves the validity of the Ansys
+model. In the central zone of the curves, that corresponds to the work range, the lines are the basically the
+same. The only difference can be seen in the final parts when the antiroll stiffness rear is low. This low value
+generates a non-linearity in the Ansys model not expected in Matlab.
+This non-linearity can be observed in the plot of the structure torsion in respect with the front antiroll
+distribution stiffness:</p>
+<div class="figure">
+<img alt="images/designChassisgrafico" src="images/designChassisgrafico" />
+</div>
+<p>An assumption done in the Matlab analytical model is that the torsional stiffness of the structure is linear.
+On the other hand, as can be seen from the above plot the structure behaviour coming from the Ansys model
+it isn’t linear changing the front antiroll distribution stiffness. While calculating the stiffness of the structure
+with shock absorbers infinitely rigid the stiffness response is linear.</p>
+<div class="figure align-center">
+<img alt="images/designChassis36.png" src="images/designChassis36.png" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis37.png" src="images/designChassis37.png" />
+</div>
+<p>Analysis before and after joints integration.
+With the same loads and constraints applied, torsional stiffness has been increased by almost a factor of 3</p>
+<div class="section" id="manufacturing-process">
+<h4>Manufacturing Process<a class="headerlink" href="#manufacturing-process" title="Permalink to this headline">¶</a></h4>
+<p>The addition of joints allows a much easier assembly and welding process, the structure can support itself
+without requiring a complex tooling structure.
+Weld bead is simpler and with more controlled thermal distribution.
+Tubes laser cutting in easier, with less waste material.</p>
+<div class="figure align-center">
+<img alt="images/designChassis38.png" src="images/designChassis38.png" />
+</div>
+<div class="figure align-center">
+<img alt="images/designChassis39.png" src="images/designChassis39.png" />
+</div>
+</div>
+</div>
+</div>
 </div>
 
 

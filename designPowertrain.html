@@ -90,13 +90,35 @@
 <li class="toctree-l2"><a class="reference internal" href="designAerodynamics.html">Aerodynamics of Chimera Evoluzione</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Powertrain of Chimera Evoluzione</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#electric">ELECTRIC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#motors">1 Motors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#inverters">2 Inverters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motors">1 Motors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#choice-of-motors">1.1 Choice of Motors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#improvements">1.2 Improvements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#inverters">2 Inverters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#choice-of-inverters">2.1 Choice of inverters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repackaging">2.2 Repackaging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#goals-and-improvements">2.3 Goals and improvements</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#mechanic">MECHANIC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#project-planning">1 Project Planning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#technical-specifications-for-transmission-design">2 Technical Specifications for Transmission Design</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mechanical-transmission-design">3 Mechanical Transmission Design</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#design-of-aluminum-structural-supports">4 Design of aluminum structural supports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technical-specifications-for-transmission-design">2 Technical Specifications for Transmission Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#motor-technical-data">2.1 Motor Technical Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tires-technical-data">2.2 Tires Technical Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mechanical-transmission-design">3 Mechanical Transmission Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#comparison-of-technical-solutions">3.1 Comparison of Technical Solutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gearbox-design">3.2 Gearbox Design</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overall-powertrain-concept-generation-and-evaluation">3.3 Overall Powertrain Concept Generation and Evaluation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#design-of-aluminum-structural-supports">4 Design of aluminum structural supports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#design-workflow">4.1 Design Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#topology-optimization-results">4.2 Topology Optimization Results</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#design-of-welded-structural-supports">5 Design of welded structural supports</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mechanical-transmission">6 Mechanical transmission</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#catch-cans">7 Catch cans</a></li>
@@ -169,7 +191,8 @@
 <div class="section" id="motors">
 <h2>1 Motors<a class="headerlink" href="#motors" title="Permalink to this headline">¶</a></h2>
 <p>Chimera Evoluzione, the new vehicle of E-agle Trento Racing Team, has a rear-wheel drive with two motors on board. “Emrax 208” high voltage motors combined with a liquid cooling are used.</p>
-<p><strong>1.1 Choice of Motors</strong></p>
+<div class="section" id="choice-of-motors">
+<h3>1.1 Choice of Motors<a class="headerlink" href="#choice-of-motors" title="Permalink to this headline">¶</a></h3>
 <p>Every team can use any number of motors. For this reason it is possible to use one motor with a mechanical differential, two motors typically mounted on-board with a rear-wheel drive configuration or four motors typically mounted in-wheel.
 First of all we have to choose which kind of motor is better to use. The possibilities are: PMSM (Permanent Magnet Synchronous Motor), DC motor and induction motor. The DC motors have to be very big for the power that we would to use, so are discarded. The induction motors have a slow dynamic and they are very bulky, so are discarded too. The PMSMs, instead, are perfect for the automotive applications because they present the best weight to power ratio, fast dynamic and high torque.
 Firstly our goal is to reduce the unsprung masses, so the choice with the motor in wheel is discarded. Than we are looking for the handling and the eventual control implementation like torque vectoring or traction control, so the choice of one motor with a mechanical differential is discarded. Than, our decision is oriented to the rear-wheel configuration with two motors on-board.
@@ -181,7 +204,9 @@ Instead of this qualitative consideration, we analyze four different automotive 
 <p>Than we analyze the motors in terms of weight, torque, RPM, cost, realizability and future control implementation which are the main features for the decision matrix implementation. Each of this feature has a value from 0 to 3.</p>
 <p>TABELLA2</p>
 <p>Analyzing this features the best motor is the Emrax 208. With this motor we use a rear-wheel drive configuration with two motors on board. The Emrax 208 motor presents some advantages thanks to its external rotor. This means that the air gap volume is major than the classic motor and this corresponds to high torque. By using two motor the maximum power is 80 kW + 80 kW. In this way we can implement some control system like torque vectoring or a electronic differential.</p>
-<p><strong>1.2 Improvements</strong></p>
+</div>
+<div class="section" id="improvements">
+<h3>1.2 Improvements<a class="headerlink" href="#improvements" title="Permalink to this headline">¶</a></h3>
 <img alt="images/designPower1.png" src="images/designPower1.png" />
 <p>Firstly we can improve the performance of the vehicle by changing the configuration of the motors.
 In fact, is proved that the 4WD configuration is better than the RWD. Than the second topic that we
@@ -200,6 +225,7 @@ solution can reach high performance thanks to the gear-less motor that can be de
 project with a specialize company. The second solution is the worst because needs to develop the
 motor and the gearbox and doesn’t reach significant improvements.</p>
 </div>
+</div>
 <div class="section" id="inverters">
 <h2>2 Inverters<a class="headerlink" href="#inverters" title="Permalink to this headline">¶</a></h2>
 <p>Since we have two motors we need two inverters to control them. The general electrical diagram for
@@ -210,7 +236,8 @@ accumulator. In this way is possible to control the two motors in an independent
 independence control is possible to implement control system like torque vectoring and electronic
 differential so is possible to split the total power in, for example, 60 kW + 20 kW depending of the
 scenario where the vehicle is.</p>
-<p><strong>2.1 Choice of inverters</strong></p>
+<div class="section" id="choice-of-inverters">
+<h3>2.1 Choice of inverters<a class="headerlink" href="#choice-of-inverters" title="Permalink to this headline">¶</a></h3>
 <p>There isn’t so many companies that develop inverters for automotive applications so we focused in
 one product that present very advantages respect to the other products. The inverters used in our
 vehicle are “Bamocar D3” developed by “Unitek”, a German company. They present the maximum
@@ -271,7 +298,9 @@ the steering wheel.</p>
 inverter. This calibration calculate the “FB-Offset” parameter that will be insert in the “feedback”
 field. There are also some calibrations as “Vdc bus zero compensation” to calibrate the offset of the
 input bus of capacitor. In this way we are sure that the initial voltage is zero.</p>
-<p><strong>2.2 Repackaging</strong></p>
+</div>
+<div class="section" id="repackaging">
+<h3>2.2 Repackaging<a class="headerlink" href="#repackaging" title="Permalink to this headline">¶</a></h3>
 <p>Another advantage of the “Bamocar D3” is the modularity of the electrical components. They can be
 disassembled in a easy way and they can be adapted in a new packaging. Our idea is to project and
 realize a new packaging that can contain both inverters to reduce the weight and the space
@@ -325,7 +354,9 @@ kapton tape.</p>
 <img alt="images/designPower11.png" src="images/designPower11.png" />
 <img alt="images/designPower11a.png" src="images/designPower11a.png" />
 <p>The PCB with the integrated circuits is putted under the green PCB in the left side.</p>
-<p><strong>2.3 Goals and improvements</strong></p>
+</div>
+<div class="section" id="goals-and-improvements">
+<h3>2.3 Goals and improvements<a class="headerlink" href="#goals-and-improvements" title="Permalink to this headline">¶</a></h3>
 <p>Thanks to this new design of inverters we achieved a lot of goals:</p>
 <blockquote>
 <div><ul class="simple">
@@ -348,6 +379,7 @@ we want to develop a custom inverter. First of all we project and realize a low 
 characteristic of the custom inverter, due to the 4WD configuration, has to be as small as possible
 with a components sized specified for our use.</p>
 </div>
+</div>
 <div class="section" id="mechanic">
 <h2>MECHANIC<a class="headerlink" href="#mechanic" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -367,7 +399,8 @@ the half shafts could be working in a horizontal position.</p>
 <div class="section" id="technical-specifications-for-transmission-design">
 <h2>2 Technical Specifications for Transmission Design<a class="headerlink" href="#technical-specifications-for-transmission-design" title="Permalink to this headline">¶</a></h2>
 <p>The mechanical transmission was designed basing on motors and tires specifications.</p>
-<p><strong>2.1 Motor Technical Data</strong></p>
+<div class="section" id="motor-technical-data">
+<h3>2.1 Motor Technical Data<a class="headerlink" href="#motor-technical-data" title="Permalink to this headline">¶</a></h3>
 <p>The vehicle is endowed with two permanent-magnet synchronous motors (model Emrax 208), each of which
 being capable of providing a maximum output power of 80 kW and a peak torque of 140 Nm. However,
 Formula SAE rules impose a maximum output power from the battery pack of 80 kW, which are then split
@@ -378,22 +411,28 @@ supplied with a maximum of 60 kW input power.</p>
 <img alt="images/designPower13.png" src="images/designPower13.png" />
 <p>The motor peak torque value was taken as a reference for the transmission design, so that in the
 Acceleration Event each motor could be delivering the maximum performance.</p>
-<p><strong>2.2 Tires Technical Data</strong></p>
+</div>
+<div class="section" id="tires-technical-data">
+<h3>2.2 Tires Technical Data<a class="headerlink" href="#tires-technical-data" title="Permalink to this headline">¶</a></h3>
 <p>Tires data were used so as to determine the maximum torque that could be transferred to each rear
 wheel without causing slipping of the tires.
 Using Pacejka “magic formula” for describing tires behavior, as well as wheel dynamics and load transfer
 equations, it was possible to determine the maximum theoretical friction coefficient for tire - ground contact,
 whence the optimal gear ratio for the mechanical transmission resulted to be around 3.3.</p>
 </div>
+</div>
 <div class="section" id="mechanical-transmission-design">
 <h2>3 Mechanical Transmission Design<a class="headerlink" href="#mechanical-transmission-design" title="Permalink to this headline">¶</a></h2>
-<p><strong>3.1 Comparison of Technical Solutions</strong></p>
+<div class="section" id="comparison-of-technical-solutions">
+<h3>3.1 Comparison of Technical Solutions<a class="headerlink" href="#comparison-of-technical-solutions" title="Permalink to this headline">¶</a></h3>
 <p>The transmission concept was chosen after building a decision matrix, which is reported below. The optimal
 solution resulted to be the one involving an ordinary single-stage gearbox. Chain drive was discarded mainly
 due to space constraints, while the epicyclic gear train was too expensive for the team, despite featuring several
 advantages with respect to the other solutions.</p>
 <img alt="images/designPower14.png" src="images/designPower14.png" />
-<p><strong>3.2 Gearbox Design</strong></p>
+</div>
+<div class="section" id="gearbox-design">
+<h3>3.2 Gearbox Design<a class="headerlink" href="#gearbox-design" title="Permalink to this headline">¶</a></h3>
 <p>The highly iterative workflow for the gearbox design is reported in the following schema. The starting point
 was the definition of power and torque requirements, as explained in section 2.</p>
 <img alt="images/designPower15.png" src="images/designPower15.png" />
@@ -401,7 +440,9 @@ was the definition of power and torque requirements, as explained in section 2.<
 <img alt="images/designPower16.png" src="images/designPower16.png" />
 <p>A render of the gearbox is depicted in the following image.</p>
 <img alt="images/designPower17.png" src="images/designPower17.png" />
-<p><strong>3.3 Overall Powertrain Concept Generation and Evaluation</strong></p>
+</div>
+<div class="section" id="overall-powertrain-concept-generation-and-evaluation">
+<h3>3.3 Overall Powertrain Concept Generation and Evaluation<a class="headerlink" href="#overall-powertrain-concept-generation-and-evaluation" title="Permalink to this headline">¶</a></h3>
 <p>The iterative design method followed throughout the overall powertrain concept generation part of
 the project, which was carried out after the gearbox design, can be summarized as shown in the
 next image.</p>
@@ -416,9 +457,11 @@ ensuring reduced slopes of the latter resulting from vertical motion of the rear
 <p>The parallelism between the driveline and the ground level was improved by studying the correct
 vertical motor position basing on chassis, suspension and wheel geometry.</p>
 </div>
+</div>
 <div class="section" id="design-of-aluminum-structural-supports">
 <h2>4 Design of aluminum structural supports<a class="headerlink" href="#design-of-aluminum-structural-supports" title="Permalink to this headline">¶</a></h2>
-<p><strong>4.1 Design Workflow</strong></p>
+<div class="section" id="design-workflow">
+<h3>4.1 Design Workflow<a class="headerlink" href="#design-workflow" title="Permalink to this headline">¶</a></h3>
 <p>Supports for the two motors and gearboxes were designed starting from an initial accurate load
 analysis, with the aim of determining the actions that the supports were to be able to withstand.</p>
 <p>In particular, basing on the maximum motor torque, forces at the gearbox bearings as well as lateral
@@ -443,7 +486,9 @@ phase was completed.</p>
 LC5.</p>
 <p>The design workflow can be summarized as shown in the following schema.</p>
 <img alt="images/designPower20.png" src="images/designPower20.png" />
-<p><strong>4.2 Topology Optimization Results</strong></p>
+</div>
+<div class="section" id="topology-optimization-results">
+<h3>4.2 Topology Optimization Results<a class="headerlink" href="#topology-optimization-results" title="Permalink to this headline">¶</a></h3>
 <p>Topology optimization was performed using the program Altair solidThinking Inspire with the
 objective of optimizing mass distribution in order to minimize supports weight while providing
 sufficient stiffness and mechanical resistance.
@@ -453,6 +498,7 @@ The main results obtained at the end of the iterative optimization process are h
 <img alt="images/designPower21b.png" src="images/designPower21b.png" />
 <img alt="images/designPower21c.png" src="images/designPower21c.png" />
 <img alt="images/designPower21d.png" src="images/designPower21d.png" />
+</div>
 </div>
 <div class="section" id="design-of-welded-structural-supports">
 <h2>5 Design of welded structural supports<a class="headerlink" href="#design-of-welded-structural-supports" title="Permalink to this headline">¶</a></h2>

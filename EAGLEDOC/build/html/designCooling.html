@@ -85,9 +85,25 @@
                 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="design.html">Design Presentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="">Cooling of Chimera Evoluzione</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduction">1 Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#design-of-the-cooling-system">2. Design of the cooling system</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#results">3. Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">1 Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#apparatuses-producing-heat">1.1 Apparatuses producing heat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quality-function-deployment-and-engineering-choices">1.2 Quality Function Deployment and Engineering choices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layout-of-the-cooling-system">1.3 Layout of the Cooling System</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#design-of-the-cooling-system">2 Design of the cooling system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#determination-of-heat-production">2.1 Determination of heat production</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#thermal-design">2.2 Thermal Design</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydraulic-design">2.3 Hydraulic Design</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#results">3 Results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#liquid-cooling-system">3.1 Liquid cooling system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hv-battery-pack-cooling-system">3.2 HV battery pack cooling system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#weight-reduction">3.3 Weight Reduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#future-development">3.4 Future Development</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="designTelemetry.html">Steering Wheel and Telemetry</a></li>
@@ -156,7 +172,8 @@
 <div class="section" id="introduction">
 <h2>1 Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <img alt="images/designCool1.png" src="images/designCool1.png" />
-<p><strong>1.1 Apparatuses producing heat</strong></p>
+<div class="section" id="apparatuses-producing-heat">
+<h3>1.1 Apparatuses producing heat<a class="headerlink" href="#apparatuses-producing-heat" title="Permalink to this headline">¶</a></h3>
 <p><strong>Electric motors: Letrica Emrax 208 LC</strong></p>
 <p>The machine elements providing the car the power necessary to achieve its great dynamic performances are two Emrax 208 electric motors, working in parallel, virtually free and linked together by an electronic differential. The starting point in order to set a cooling system, not having experimental data, was the factory technical datasheet. Advised cooling parameters were a water flow of 7-8lpm with inlet water temperature not exceeding 50°C. No extra information was added on the internal geometry of the liquid passage or the heat exchange coefficient.</p>
 <p><strong>Inverters: Unitek Bamocar D3-V6</strong></p>
@@ -172,7 +189,9 @@ envelope of the battery modules. The interface allowing air to enter consists of
 the conveyor against the battery pack walls. On the end (left side of the pack) of the channels, we find asimilar plate, holding three conveyor that act also as support for high static pressure fans.</p>
 <img alt="images/designCool2a" src="images/designCool2a" />
 <img alt="images/designCool2b" src="images/designCool2b" />
-<p><strong>1.2 Quality Function Deployment and Engineering choices</strong></p>
+</div>
+<div class="section" id="quality-function-deployment-and-engineering-choices">
+<h3>1.2 Quality Function Deployment and Engineering choices<a class="headerlink" href="#quality-function-deployment-and-engineering-choices" title="Permalink to this headline">¶</a></h3>
 <p><strong>Quality Function Deployment</strong></p>
 <p>With the target of investing time and consolidating ideas about the product to be designed, a quality functional deployment (QFD) was first built.</p>
 <p>The construction of the house of quality first began with identifying who the main customers for our product are.
@@ -200,7 +219,9 @@ The application is also very modular.
 Concept 1 minimizes the number of pumps, but has less controllability, and will have the lowest efficiency.
 Concept 3 has a good controllability and efficiency and in particular allows to have the water flow perfectly divided in the left and rigth motor and inverter.
 But it has no modularity and the demand of power will be higher, as water will always pass inside the motors even when not needed.</p>
-<p><strong>1.3 Layout of the Cooling System</strong></p>
+</div>
+<div class="section" id="layout-of-the-cooling-system">
+<h3>1.3 Layout of the Cooling System<a class="headerlink" href="#layout-of-the-cooling-system" title="Permalink to this headline">¶</a></h3>
 <p><strong>Water cooling system: ultimate layout.</strong>
 The final choice, aided by the comparison seen in the previous section, was concept 2. It was decided to have a slightly more complex system which optimizes performance at minimum electrical power requirement and with greater modularity.</p>
 <p><strong>Battery pack air cooling: a separate solution</strong></p>
@@ -221,9 +242,11 @@ So the conveyor on the right side and the three fan supporting conveyors on the 
 All the conveyors are 3D printed in PA12 by Multi Jet Fusion, which provides an almost isotopic material, resistant to abrasion, stiff and strong.</p>
 <img alt="images/designCool789.png" src="images/designCool789.png" />
 </div>
+</div>
 <div class="section" id="design-of-the-cooling-system">
-<h2>2. Design of the cooling system<a class="headerlink" href="#design-of-the-cooling-system" title="Permalink to this headline">¶</a></h2>
-<p><strong>2.1 Determination of heat production</strong></p>
+<h2>2 Design of the cooling system<a class="headerlink" href="#design-of-the-cooling-system" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="determination-of-heat-production">
+<h3>2.1 Determination of heat production<a class="headerlink" href="#determination-of-heat-production" title="Permalink to this headline">¶</a></h3>
 <p><strong>Electric motors: efficiency considerations</strong></p>
 <p>From the performance point of view, the factory requirements for the cooling system were too much strict and would lead to an over-dimensioned cooling system. Instead, the aim of the team was to develop a clever cooling system specifically designed for a use rich in peaks of power instead than continuous power, and that could reduce the weight to the minimum. It was decided to contact the manufacturer to achieve extra information.
 Letrica provided us with experimental work on Emrax 228 motors and extra information on the thermal resistance of the coiling and the electronic components.</p>
@@ -252,7 +275,9 @@ This testing bench would also allow to simulate different cooling layouts and th
 However, the whole testing apparatus is still under development for this part and more precise consideration will be carried out to increase the precision and scientific reliability of the acquired data. An average current of 35 Ampere was chosen, according to data available on the net, confirmed by road tests made later to the designing step.
 This value, combined from the internal resistance of the battery pack determined experimentally (5mohm at 25°C, 3.5mOhm at 50°C), lead to an estimation of 600W.
 Yet, the mean current could reach values up to 60A, which leads to 2000W.</p>
-<p><strong>2.2 Thermal Design</strong></p>
+</div>
+<div class="section" id="thermal-design">
+<h3>2.2 Thermal Design<a class="headerlink" href="#thermal-design" title="Permalink to this headline">¶</a></h3>
 <p><strong>Design approach</strong>
 The design of the radiators for the liquid cooling system was carried out using the following approach.
 The heat production of the corresponding unit to be cooled, treated in the previous sections, was taken as a regime condition.
@@ -348,7 +373,9 @@ is accepted, and it proves to be light and performing given the starting constra
 <img alt="images/designCool20.jpeg" src="images/designCool20.jpeg" />
 <img alt="images/designCool21.jpeg" src="images/designCool21.jpeg" />
 <img alt="images/designCool22.png" src="images/designCool22.png" />
-<p><strong>2.3 Hydraulic Design</strong></p>
+</div>
+<div class="section" id="hydraulic-design">
+<h3>2.3 Hydraulic Design<a class="headerlink" href="#hydraulic-design" title="Permalink to this headline">¶</a></h3>
 <p><strong>Experimental Work on Hydraulic losses determination</strong>
 To determine the working point of the liquid cooling system it was necessary to set up an experimental set
 of tubing. A Marco UP12 pump was used, and the unit to be tested was connected to a manometer at the
@@ -359,9 +386,11 @@ contribution of tubing, bends in tubes and fittings could be neglected, and thus
 extrapolated for each unit. The schematics for the hydraulic tests are shown below.</p>
 <img alt="images/designCool23.png" src="images/designCool23.png" />
 </div>
+</div>
 <div class="section" id="results">
-<h2>3. Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
-<p><strong>3.1 Liquid cooling system</strong></p>
+<h2>3 Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="liquid-cooling-system">
+<h3>3.1 Liquid cooling system<a class="headerlink" href="#liquid-cooling-system" title="Permalink to this headline">¶</a></h3>
 <img alt="images/designCool24.png" src="images/designCool24.png" />
 <p><strong>Working Point of the circuit.</strong></p>
 <p>Resistance curve for each unit were compared with the power curve of the GRI INTG3 pump, provided by the manufacturer.
@@ -374,7 +403,9 @@ This allows, combined with data calculated from the heat exchanger design, to fi
 <p>Above are shown the schematics of the inverter cooling systems with calculated curves describing its working points displayed below.
 The nominal values are summarized in the datasheet.</p>
 <img alt="images/designCool26.png" src="images/designCool26.png" />
-<p><strong>3.2 HV battery pack cooling system</strong></p>
+</div>
+<div class="section" id="hv-battery-pack-cooling-system">
+<h3>3.2 HV battery pack cooling system<a class="headerlink" href="#hv-battery-pack-cooling-system" title="Permalink to this headline">¶</a></h3>
 <p><strong>Layout of the Battery cooling system and present work on the simulation</strong></p>
 <img alt="images/designCool27.png" src="images/designCool27.png" />
 <p>The obtained geometry distributes evenly the air flow, allowing for an homogeneous heat transfer.
@@ -385,7 +416,9 @@ Data of the chosen fans are also displayed, and will in future be linked to the 
 <p>To demonstrate the distribution of the airflow we have the velocity field inside the conveyor.</p>
 <img alt="images/designCool30.png" src="images/designCool30.png" />
 <img alt="images/designCool31.png" src="images/designCool31.png" />
-<p><strong>3.3 Weight Reduction</strong></p>
+</div>
+<div class="section" id="weight-reduction">
+<h3>3.3 Weight Reduction<a class="headerlink" href="#weight-reduction" title="Permalink to this headline">¶</a></h3>
 <p><strong>Additive Manufacturing for fittings and tanks</strong></p>
 <p>Different solutions are available on the market for hydraulic fittings such as consumer hydraulic fittings,
 manufacturers fittings for motors and inverter cooling plate, or quick connection fittings. In our case, it was
@@ -426,7 +459,9 @@ with similar heat transfer coefficient but significantly lower pressure loss.</p
 <p>Considering all the newly designed components explained above, the overall weight reduction is,
 considering also the smaller volume of fluid, is roughly of 70%, with an estimated weight of the whole
 system of 7 kilograms.</p>
-<p><strong>3.4 Future Development</strong></p>
+</div>
+<div class="section" id="future-development">
+<h3>3.4 Future Development<a class="headerlink" href="#future-development" title="Permalink to this headline">¶</a></h3>
 <p><strong>Additive Manufacturing for Heat Exchangers</strong></p>
 <p>The conventional manufacturing techniques for heat exchangers have reached a saturation. The
 geometries obtainable for fins and tubes with techniques such as profile extrusion, lamination, cutting,
@@ -462,6 +497,7 @@ insulation. Then a thermal simulation will be carried out to determine the tempe
 pack. This analysis will allow to consider the hotter spots, to adjust the geometry of the conveyors and if
 needed to modify the position of the fans. With this model it will also be possible to re-design the new
 HVBP to optimize the cooling, as it is of central importance for achieving the maximum efficiency</p>
+</div>
 </div>
 </div>
 

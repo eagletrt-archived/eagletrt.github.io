@@ -88,11 +88,25 @@
 <li class="toctree-l2"><a class="reference internal" href="designTelemetry.html">Steering Wheel and Telemetry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="designEco.html">Organization, budgeting and ASD Administration for Chimera Evoluzione</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Aerodynamics of Chimera Evoluzione</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#design">Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design">Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-concept">The Concept</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-s1223-airfoil">The [s1223] Airfoil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#going-3d">Going 3D</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#dynamics">Dynamics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#structural-efficiency">Structural efficiency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#structural-efficiency">Structural efficiency</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-wing-shell">The Wing shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upright-attachment">Upright attachment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wing-supports">Wing Supports</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#manufacturing-of-the-wing-shell">Manufacturing of the wing shell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#future-developments">Future Developments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#future-developments">Future Developments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#development-of-a-full-aerodynamic-pack">Development of a full aerodynamic pack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#car-drag-reduction">Car drag reduction</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="designPowertrain.html">Powertrain of Chimera Evoluzione</a></li>
@@ -157,7 +171,8 @@
 <img alt="images/design.png" src="images/design.png" />
 <div class="section" id="design">
 <h2>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h2>
-<p><strong>The Concept</strong></p>
+<div class="section" id="the-concept">
+<h3>The Concept<a class="headerlink" href="#the-concept" title="Permalink to this headline">¶</a></h3>
 <p>This is the first time in our history that we perform a complete aerodynamics study to improve our
 car’s performances. Because of the low speed and high accelerations of our car, we decided to focus
 our aerodynamics on creating downforce. Having no experience in aerodynamics devices
@@ -173,7 +188,9 @@ worrying about the additional load coming from the wing. We decided to experimen
 also to make easier a future development of an undertray, thanks to the more predictable height and
 pitch of the vehicle.</p>
 <img alt="images/designAero1.png" src="images/designAero1.png" />
-<p><strong>The [s1223] Airfoil</strong></p>
+</div>
+<div class="section" id="the-s1223-airfoil">
+<h3>The [s1223] Airfoil<a class="headerlink" href="#the-s1223-airfoil" title="Permalink to this headline">¶</a></h3>
 <p>The airfoil has been chosen from the airfoiltools.com online database, it is the [s1223], which is a
 High-lift cambered airfoil, and performs well at low speed in terms of Cl/Cd. The airfoil
 performances have been validated in the Ansys Fluent 2D environment.</p>
@@ -209,7 +226,9 @@ the stream-line plot we can notice a partial flow detachment at the very tip of 
 be the cause of our Cl drop and Cd rise.
 It’s unclear if the flow detachment is supposed to exist, or if it is the result of an approximation.
 Anyway, we headed up with the design of the wing.</p>
-<p><strong>Going 3D</strong></p>
+</div>
+<div class="section" id="going-3d">
+<h3>Going 3D<a class="headerlink" href="#going-3d" title="Permalink to this headline">¶</a></h3>
 <img alt="images/designAero12.jpg" src="images/designAero12.jpg" />
 <p>After the 2D validation, the shape of thw wing has been designed to concentrate the highest angle of attack on the sides (where the airflow is undisturbed by the main-hoop&#8217;s turbulence) reducing by 3° in the middle. At the
 same time the wing chord increases toward the middle of the wing, in order to increase the flexural resistance, and keep high the lift on the full span.</p>
@@ -229,6 +248,7 @@ If we look at the stream-line graphics we clearly see two counter rotating vorti
 <img alt="images/designAero20.jpg" src="images/designAero20.jpg" />
 <p>These two vortices dissipate energy (increasing Cd), and simultaneously decrease the effective wing
 span (dropping Cl).</p>
+</div>
 </div>
 <div class="section" id="dynamics">
 <h2>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this headline">¶</a></h2>
@@ -251,7 +271,8 @@ definitely under-steering. Our plan for the future is to add a front wing to com
 <h2>Structural efficiency<a class="headerlink" href="#structural-efficiency" title="Permalink to this headline">¶</a></h2>
 <p>Once the dynamics were validated, it was time to check the structural efficiency of the whole aero
 device.</p>
-<p><strong>The Wing shell</strong></p>
+<div class="section" id="the-wing-shell">
+<h3>The Wing shell<a class="headerlink" href="#the-wing-shell" title="Permalink to this headline">¶</a></h3>
 <p>The most critical part of the wing structure is the wing shell, it must guarantee a maximum
 deflection lower than 10mm, with 200N applied vertically.
 Since we don’t have precise data about this carbon fiber layout, in our simulation we used a single
@@ -279,7 +300,9 @@ reached, which is ok.</p>
 FSG2018 rules. By over dimensioning the carbon fiber layout we are sure that the rigidity
 requirements are met.</p>
 <img alt="images/designAero31.jpg" src="images/designAero31.jpg" />
-<p><strong>Upright attachment</strong></p>
+</div>
+<div class="section" id="upright-attachment">
+<h3>Upright attachment<a class="headerlink" href="#upright-attachment" title="Permalink to this headline">¶</a></h3>
 <p>The upright attachment is made out of 3 Al 6082 sheets, pressed together by 5 screws around the
 wing supports.</p>
 <img alt="images/designAero32.jpg" src="images/designAero32.jpg" />
@@ -300,7 +323,9 @@ limited to 52MPa.
 This part has been designed to guarantee a high stiffness, and distribute the tension on the carbon
 fiber support, in order to avoid stress concentrations.</p>
 <img alt="images/designAero36.jpg" src="images/designAero36.jpg" />
-<p><strong>Wing Supports</strong></p>
+</div>
+<div class="section" id="wing-supports">
+<h3>Wing Supports<a class="headerlink" href="#wing-supports" title="Permalink to this headline">¶</a></h3>
 <p>As for the wing shell, we still made conservative assumptions for this part, and over dimensioned
 the carbon layout. In our simulation we still used a single carbon-epoxy layer, instead of the 6 used
 on the real part, and a 9mm thick foam core.</p>
@@ -313,6 +338,7 @@ hitting a curb, plus 200N from aero downforce</p>
 the core.</p>
 <img alt="images/designAero40.png" src="images/designAero40.png" />
 <p>The displacement is ok, simply negligible for our purposes.</p>
+</div>
 </div>
 <div class="section" id="manufacturing-of-the-wing-shell">
 <h2>Manufacturing of the wing shell<a class="headerlink" href="#manufacturing-of-the-wing-shell" title="Permalink to this headline">¶</a></h2>
@@ -337,15 +363,19 @@ large margin to improve our car performances using aerodynamics.</p>
 <li>Improvement of the carbon fiber manufacturing techniques.</li>
 </ul>
 </div></blockquote>
-<p><strong>Development of a full aerodynamic pack</strong></p>
+<div class="section" id="development-of-a-full-aerodynamic-pack">
+<h3>Development of a full aerodynamic pack<a class="headerlink" href="#development-of-a-full-aerodynamic-pack" title="Permalink to this headline">¶</a></h3>
 <p>We aim to the development of a fully adjustable aero pack. This to increase our knowledge of the overall
 vehicle behavior, and correction of the actual understeering at high speeds.</p>
 <p>Our plan is to have a large use of 3D printed aerodynamics appendix instead of carbon fiber ones.
 Additive manufacturing allows us to have extremely complex shapes, at relatively low costs if compared to
 the carbon fiber laminated ones.</p>
-<p><strong>Car drag reduction</strong></p>
+</div>
+<div class="section" id="car-drag-reduction">
+<h3>Car drag reduction<a class="headerlink" href="#car-drag-reduction" title="Permalink to this headline">¶</a></h3>
 <p>We performed a rough analysis of the car behavior in the free stream using Autodesk Flow Design ©. What
 emerged is that the main drag sources in our car are the front wheels, and the very high main hoop.</p>
+</div>
 </div>
 </div>
 
