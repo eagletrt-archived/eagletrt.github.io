@@ -10,7 +10,8 @@ Cooling of Chimera Evoluzione
 
 .. image:: /images/designCooling/designCool1.png
 
-**1.1 Apparatuses producing heat**
+1.1 Apparatuses producing heat
+******************************
 
 **Electric motors: Letrica Emrax 208 LC**
 
@@ -34,7 +35,8 @@ the conveyor against the battery pack walls. On the end (left side of the pack) 
 .. image:: /images/designCooling/designCool2a
 .. image:: /images/designCooling/designCool2b
 
-**1.2 Quality Function Deployment and Engineering choices**
+1.2 Quality Function Deployment and Engineering choices
+*******************************************************
 
 **Quality Function Deployment**
 
@@ -78,7 +80,8 @@ Concept 1 minimizes the number of pumps, but has less controllability, and will 
 Concept 3 has a good controllability and efficiency and in particular allows to have the water flow perfectly divided in the left and rigth motor and inverter.
 But it has no modularity and the demand of power will be higher, as water will always pass inside the motors even when not needed.
 
-**1.3 Layout of the Cooling System**
+1.3 Layout of the Cooling System
+********************************
 
 **Water cooling system: ultimate layout.**
 The final choice, aided by the comparison seen in the previous section, was concept 2. It was decided to have a slightly more complex system which optimizes performance at minimum electrical power requirement and with greater modularity.
@@ -104,10 +107,11 @@ All the conveyors are 3D printed in PA12 by Multi Jet Fusion, which provides an 
 
 .. image:: /images/designCooling/designCool789.png
 
-2. Design of the cooling system
+2 Design of the cooling system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**2.1 Determination of heat production**
+2.1 Determination of heat production
+************************************
 
 **Electric motors: efficiency considerations**
 
@@ -148,7 +152,8 @@ However, the whole testing apparatus is still under development for this part an
 This value, combined from the internal resistance of the battery pack determined experimentally (5mohm at 25°C, 3.5mOhm at 50°C), lead to an estimation of 600W.
 Yet, the mean current could reach values up to 60A, which leads to 2000W.
 
-**2.2 Thermal Design**
+2.2 Thermal Design
+******************
 
 **Design approach**
 The design of the radiators for the liquid cooling system was carried out using the following approach.
@@ -267,7 +272,8 @@ is accepted, and it proves to be light and performing given the starting constra
 .. image:: /images/designCooling/designCool21.jpeg
 .. image:: /images/designCooling/designCool22.png
 
-**2.3 Hydraulic Design**
+2.3 Hydraulic Design
+********************
 
 **Experimental Work on Hydraulic losses determination**
 To determine the working point of the liquid cooling system it was necessary to set up an experimental set
@@ -280,10 +286,11 @@ extrapolated for each unit. The schematics for the hydraulic tests are shown bel
 
 .. image:: /images/designCooling/designCool23.png
 
-3. Results
+3 Results
 ^^^^^^^^^^
 
-**3.1 Liquid cooling system**
+3.1 Liquid cooling system
+*************************
 
 .. image:: /images/designCooling/designCool24.png
 
@@ -306,7 +313,8 @@ The nominal values are summarized in the datasheet.
 
 .. image:: /images/designCooling/designCool26.png
 
-**3.2 HV battery pack cooling system**
+3.2 HV battery pack cooling system
+**********************************
 
 **Layout of the Battery cooling system and present work on the simulation**
 
@@ -326,7 +334,8 @@ To demonstrate the distribution of the airflow we have the velocity field inside
 .. image:: /images/designCooling/designCool30.png
 .. image:: /images/designCooling/designCool31.png
 
-**3.3 Weight Reduction**
+3.3 Weight Reduction
+********************
 
 **Additive Manufacturing for fittings and tanks**
 
@@ -376,7 +385,8 @@ Considering all the newly designed components explained above, the overall weigh
 considering also the smaller volume of fluid, is roughly of 70%, with an estimated weight of the whole
 system of 7 kilograms.
 
-**3.4 Future Development**
+3.4 Future Development
+**********************
 
 **Additive Manufacturing for Heat Exchangers**
 

@@ -8,7 +8,8 @@ Aerodynamics of Chimera Evoluzione
 Design
 ^^^^^^
 
-**The Concept**
+The Concept
+***********
 
 This is the first time in our history that we perform a complete aerodynamics study to improve our
 car’s performances. Because of the low speed and high accelerations of our car, we decided to focus
@@ -27,7 +28,8 @@ pitch of the vehicle.
 
 .. image:: /images/designAerodynamics/designAero1.png
 
-**The [s1223] Airfoil**
+The [s1223] Airfoil
+*******************
 
 The airfoil has been chosen from the airfoiltools.com online database, it is the [s1223], which is a
 High-lift cambered airfoil, and performs well at low speed in terms of Cl/Cd. The airfoil
@@ -86,7 +88,8 @@ be the cause of our Cl drop and Cd rise.
 It’s unclear if the flow detachment is supposed to exist, or if it is the result of an approximation.
 Anyway, we headed up with the design of the wing.
 
-**Going 3D**
+Going 3D
+********
 
 .. image:: /images/designAerodynamics/designAero12.jpg
 
@@ -146,7 +149,8 @@ Structural efficiency
 Once the dynamics were validated, it was time to check the structural efficiency of the whole aero
 device.
 
-**The Wing shell**
+The Wing shell
+**************
 
 The most critical part of the wing structure is the wing shell, it must guarantee a maximum
 deflection lower than 10mm, with 200N applied vertically.
@@ -188,7 +192,8 @@ requirements are met.
 
 .. image:: /images/designAerodynamics/designAero31.jpg
 
-**Upright attachment**
+Upright attachment
+******************
 
 The upright attachment is made out of 3 Al 6082 sheets, pressed together by 5 screws around the
 wing supports.
@@ -219,7 +224,8 @@ fiber support, in order to avoid stress concentrations.
 
 .. image:: /images/designAerodynamics/designAero36.jpg
 
-**Wing Supports**
+Wing Supports
+*************
 
 As for the wing shell, we still made conservative assumptions for this part, and over dimensioned
 the carbon layout. In our simulation we still used a single carbon-epoxy layer, instead of the 6 used
@@ -268,7 +274,8 @@ large margin to improve our car performances using aerodynamics.
    * Overall car characterization and drag reduction.
    * Improvement of the carbon fiber manufacturing techniques.
 
-**Development of a full aerodynamic pack**
+Development of a full aerodynamic pack
+**************************************
 
 We aim to the development of a fully adjustable aero pack. This to increase our knowledge of the overall
 vehicle behavior, and correction of the actual understeering at high speeds.
@@ -277,7 +284,8 @@ Our plan is to have a large use of 3D printed aerodynamics appendix instead of c
 Additive manufacturing allows us to have extremely complex shapes, at relatively low costs if compared to
 the carbon fiber laminated ones.
 
-**Car drag reduction**
+Car drag reduction
+******************
 
 We performed a rough analysis of the car behavior in the free stream using Autodesk Flow Design ©. What
 emerged is that the main drag sources in our car are the front wheels, and the very high main hoop.

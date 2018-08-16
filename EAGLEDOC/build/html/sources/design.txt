@@ -12,7 +12,7 @@ Contents:
 
    designCooling
 
-   designSuspensions
+   designSuspension
 
    designTelemetry
 
